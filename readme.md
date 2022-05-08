@@ -5,6 +5,7 @@
 - HashMap (AKA Dictionary)
 - HashSet
 - Queue
+- Stack
 
 # Videos
 - [What is hashing? (2m)](https://youtu.be/2BldESGZKB8)
