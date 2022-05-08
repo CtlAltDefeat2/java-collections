@@ -10,6 +10,7 @@ public class Person {
 
     private String firstName;
     private String lastName;
+    private String ssn;
     private int age;
 
     //
@@ -18,10 +19,11 @@ public class Person {
 
     public Person() {}
 
-    public Person(String firstName, String lastName, int age) {
+    public Person(String firstName, String lastName, int age, String ssn) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.age = age;
+        this.ssn = ssn;
     }
 
     //
@@ -33,7 +35,11 @@ public class Person {
         if (this == o) return true;
         if (!(o instanceof Person)) return false;
         Person person = (Person) o;
-        return age == person.age && firstName.equals(person.firstName) && lastName.equals(person.lastName);
+        if (this.ssn.equals(person.ssn)) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     @Override

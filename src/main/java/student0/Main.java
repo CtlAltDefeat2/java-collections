@@ -4,18 +4,24 @@ import java.util.Objects;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("here");
-
-        var p = new Person("Marty", "Burolla", 11);
-        var p1 = new Person("Marty", "Burolla", 11);
-        System.out.println(p.hashCode());
-        System.out.println(p1.hashCode());
+        ex1();
+        ex2();
+        ex3();
+        ex4();
+        ex5();
     }
 
     private static void ex1() {
+        var p = new Person("Tom", "Thumb", 11, "123-45-1234");
+        var p1 = new Person("Jon", "Smith", 22, "123-45-1234");
+        var p2 = new Person("Jon", "Smith", 22, "000-00-0000");
 
-
-
+        if (p.equals(p1)) {
+            System.out.printf("Yes");
+        }
+        if (p1.equals(p2)) {
+            System.out.println("Here");
+        }
     }
 
     private static void ex2() {
@@ -31,6 +37,10 @@ public class Main {
     }
 
     private static void ex5() {
+
+    }
+
+    private static void ex6() {
 
     }
 
