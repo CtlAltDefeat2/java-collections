@@ -75,12 +75,29 @@ Bob Smith, 22, 222-22-2222
 Alice Jones, 11, 111-11-1111
 ```
 
-The `PersonDeDeuper` wraps (contains) a `HashSet` that performs the de-duping logic.
+The `PersonDeDeuper` wraps (contains) a `HashSet` that performs the de-duping logic. Remember to update the `Person` class
+so that the `HashSet` can identity unique persons.
 
 # Ex. 4
 
+Create a class called `WordReverser` that can be consumed in the following manner:
+
+```java
+var wordReverser = new WordReverser("This is a test");
+wordReverser.reverseWords();
+System.out.println(wordReverser.getReversedWords());
+```
+
+Output:
+```
+test a is This 
+```
+
+The `WordReverser` wraps (contains) a stack to aid in reversing the words.
 
 # Ex. 5
+
+
 
 
 # Ex. 6
