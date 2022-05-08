@@ -1,4 +1,5 @@
 # Java Collections
+Assignments are located [here](./assignments.md).
 
 # Data Structures
 - ArrayList
