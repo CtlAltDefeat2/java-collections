@@ -3,6 +3,7 @@ package student0;
 import java.util.Dictionary;
 import java.util.HashMap;
 import java.util.Objects;
+import java.util.Set;
 
 public class Main {
     public static void main(String[] args) {
@@ -11,6 +12,7 @@ public class Main {
         ex3();
         //ex4();
         //ex5();
+        //ex6();
     }
 
     private static void ex1() {
@@ -34,6 +36,15 @@ public class Main {
     }
 
     private static void ex3() {
+
+        var p = new Person("Alice", "Jones", 11, "111-11-1111");
+        var p1 = new Person("Alice", "Jones", 11, "111-11-1111");
+        var p2 = new Person("Bob", "Smith", 22, "222-22-2222");
+
+        var set = new Set<Person>();
+
+
+
 
     }
 
