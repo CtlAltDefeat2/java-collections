@@ -52,8 +52,30 @@ on 2
 The `WordCounter` contains a `HashMap` which contains the number of occurrances for each word in the sentence.
 
 # Ex. 3
+Create a class called `PersonDeDuper` that can be consumed in the following manner:
 
+```java
+var p = new Person("Alice", "Jones", 11, "111-11-1111");
+var p1 = new Person("Alice", "Jones", 11, "111-11-1111");
+var p2 = new Person("Bob", "Smith", 22, "222-22-2222");
+var p3 = new Person("Bob", "Smith", 22, "222-22-2222");
 
+var personDeDuper = new PersonDeDuper();
+personDeDuper.addPerson(p);
+personDeDuper.addPerson(p1);
+personDeDuper.addPerson(p2);
+personDeDuper.addPerson(p3);
+
+System.out.println(personDeDuper.getUniquePeople());
+```
+
+Output:
+```
+Bob Smith, 22, 222-22-2222
+Alice Jones, 11, 111-11-1111
+```
+
+The `PersonDeDeuper` wraps (contains) a `HashSet` that performs the de-duping logic.
 
 # Ex. 4
 

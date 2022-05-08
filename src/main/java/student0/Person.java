@@ -46,4 +46,9 @@ public class Person {
     public int hashCode() {
         return Objects.hash(firstName, lastName, age, ssn);
     }
+
+    @Override
+    public String toString() {
+        return firstName + " " + lastName + ", " + age + ", " + ssn;
+    }
 }
