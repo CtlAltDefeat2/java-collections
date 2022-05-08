@@ -1,5 +1,6 @@
 package student0;
 
+import java.lang.reflect.Array;
 import java.util.*;
 
 public class Main {
@@ -7,8 +8,8 @@ public class Main {
         //ex1();
         //ex2();
         //ex3();
-        ex4();
-        //ex5();
+        //ex4();
+        ex5();
         //ex6();
     }
 
@@ -54,6 +55,17 @@ public class Main {
     }
 
     private static void ex5() {
+        var p1 = new Person("Alice", "Jones", 11, "111-11-1111");
+        var p2 = new Person("Bob", "Smith", 22, "222-22-2222");
+
+        var list = new ArrayList<Person>();
+
+        list.add(p1);
+        list.add(p2);
+
+        var ppp = list.stream().map(pp -> pp).toList();
+        System.out.println(ppp);
+
 
     }
 

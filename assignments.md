@@ -1,6 +1,6 @@
 # Assignments
 
-# Ex. 1
+# Ex. 1 Equals
 
 Create a `Person` class that can be consumed in the following manner:
 
@@ -24,7 +24,7 @@ Yes
 
 The `Person` class overrides the equals method.
 
-# Ex. 2
+# Ex. 2 WordCounting
 
 Create a class called `WordCounter` that can be consumed in this manner:
 
@@ -51,7 +51,7 @@ on 2
 
 The `WordCounter` contains a `HashMap` which contains the number of occurrances for each word in the sentence.
 
-# Ex. 3
+# Ex. 3 PersonDeDuper
 Create a class called `PersonDeDuper` that can be consumed in the following manner:
 
 ```java
@@ -78,7 +78,7 @@ Alice Jones, 11, 111-11-1111
 The `PersonDeDeuper` wraps (contains) a `HashSet` that performs the de-duping logic. Remember to update the `Person` class
 so that the `HashSet` can identity unique persons.
 
-# Ex. 4
+# Ex. 4 WordReverser
 
 Create a class called `WordReverser` that can be consumed in the following manner:
 
