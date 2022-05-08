@@ -95,9 +95,9 @@ test a is This
 
 The `WordReverser` wraps (contains) a stack to aid in reversing the words.
 
-# Ex. 5
+# Ex. 5 
 
 
 
 
-# Ex. 6
+# Ex. 6 
