@@ -3,7 +3,7 @@
 # Data Structures
 - ArrayList
 - HashMap (AKA Dictionary)
-- Set
+- HashSet
 - Queue
 
 # Videos

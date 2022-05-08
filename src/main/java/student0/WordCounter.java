@@ -11,7 +11,7 @@ public class WordCounter {
     //
 
     private StringTokenizer stringTokenizer;
-    private HashMap<String, Integer> wordDictionary;
+    private HashMap<String, Integer> wordMap;
 
     //
     // Constructors
@@ -21,7 +21,7 @@ public class WordCounter {
 
     public WordCounter(String inputString) {
         this.stringTokenizer = new StringTokenizer(inputString);
-        this.wordDictionary = new HashMap<String, Integer>();
+        this.wordMap = new HashMap<String, Integer>();
     }
 
     //
@@ -31,20 +31,20 @@ public class WordCounter {
     public void countWords() {
         while (stringTokenizer.hasMoreTokens()) {
             var word = stringTokenizer.nextToken().toLowerCase(Locale.ROOT);
-            if (wordDictionary.containsKey(word)) {
-                var count = wordDictionary.get(word);
-                wordDictionary.put(word, ++count);
+            if (wordMap.containsKey(word)) {
+                var count = wordMap.get(word);
+                wordMap.put(word, ++count);
             } else {
-                wordDictionary.put(word, 1);
+                wordMap.put(word, 1);
             }
         }
     }
 
     public String getWordCount() {
         var retval = "";
-        var keySet = wordDictionary.keySet();
+        var keySet = wordMap.keySet();
         for (String s : keySet) {
-            retval += (s + " " + wordDictionary.get(s) + "\n");
+            retval += (s + " " + wordMap.get(s) + "\n");
         }
         return retval;
     }
