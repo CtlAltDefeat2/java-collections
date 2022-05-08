@@ -1,14 +1,16 @@
 package student0;
 
+import java.util.Dictionary;
+import java.util.HashMap;
 import java.util.Objects;
 
 public class Main {
     public static void main(String[] args) {
-        ex1();
+        //ex1();
         ex2();
-        ex3();
-        ex4();
-        ex5();
+        //ex3();
+        //ex4();
+        //ex5();
     }
 
     private static void ex1() {
@@ -25,7 +27,10 @@ public class Main {
     }
 
     private static void ex2() {
-
+        var inputString = "The water main broke on water street on the day before my birthday";
+        var wordCounter = new WordCounter(inputString);
+        wordCounter.countWords();
+        System.out.println(wordCounter.getWordCount());
     }
 
     private static void ex3() {

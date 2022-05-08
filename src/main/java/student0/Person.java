@@ -8,10 +8,10 @@ public class Person {
     // Data Members
     //
 
-    private String firstName;
-    private String lastName;
-    private String ssn;
     private int age;
+    private String ssn;
+    private String lastName;
+    private String firstName;
 
     //
     // Constructors
@@ -20,10 +20,10 @@ public class Person {
     public Person() {}
 
     public Person(String firstName, String lastName, int age, String ssn) {
-        this.firstName = firstName;
-        this.lastName = lastName;
         this.age = age;
         this.ssn = ssn;
+        this.lastName = lastName;
+        this.firstName = firstName;
     }
 
     //
