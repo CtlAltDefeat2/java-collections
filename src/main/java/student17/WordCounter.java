@@ -13,12 +13,10 @@ public class WordCounter {
     //
     public WordCounter(String sent) {
         String[] words = sent.split(" ");
-        for(String word : words){
+        for (String word : words) {
             hashMap.merge(word, 1, Integer::sum);
         }
-        hashMap.entrySet().forEach(entry -> {
-            System.out.println(entry.getKey() + " " + entry.getValue());
-        });
+        hashMap.forEach((key, value) -> System.out.println(key + " " + value));
     }
     public void countWords() {
     }
