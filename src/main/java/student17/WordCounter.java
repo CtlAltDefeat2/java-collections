@@ -22,7 +22,9 @@ public class WordCounter {
         for(String word : words){
             hashMap.merge(word, 1, Integer::sum);
         }
-        System.out.println(hashMap);
+        hashMap.entrySet().forEach(entry -> {
+            System.out.println(entry.getKey() + " " + entry.getValue());
+        });
     }
 
     public void countWords() {
@@ -30,5 +32,10 @@ public class WordCounter {
 
     public boolean getWordCount() {
         return false;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString();
     }
 }
