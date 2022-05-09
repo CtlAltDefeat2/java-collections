@@ -25,7 +25,11 @@ public class Main {
     }
 
     private static void ex2() {
-        System.out.println("TODO...");
+        var inputString = "The water main broke on water street on the day before my birthday";
+        int countWords = 0;
+        var wordCounter = new WordCounter(inputString);
+        wordCounter.countWords();
+        System.out.println(wordCounter.getWordCount());
     }
 
     private static void ex3() {
