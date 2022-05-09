@@ -7,30 +7,25 @@ public class Person {
     String fName;
     String lName;
     int age;
-    String bDay;
+    String SSN;
 
-    Person(String fName, String lName, int age, String bDay) {
+    Person(String fName, String lName, int age, String SSN) {
         this.fName = fName;
         this.lName = lName;
         this.age = age;
-        this.bDay = bDay;
+        this.SSN = SSN;
     }
-
 
     @Override
     public boolean equals(Object o) {
-        if (this == o)  {
-            return true;
-        }
-        if (o == null || getClass() != o.getClass()) {
-            return false;
-        }
+        if (this == o) return true;
+        if (!(o instanceof Person)) return false;
         Person person = (Person) o;
-        return age == person.age && fName.equals(person.fName) && lName.equals(person.lName) && bDay.equals(person.bDay);
+        return SSN.equals(person.SSN);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(fName, lName, age, bDay);
+        return Objects.hash(SSN);
     }
 }
