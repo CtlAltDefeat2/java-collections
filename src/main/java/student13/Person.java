@@ -28,11 +28,11 @@ public class Person {
         if (this == o) return true;
         if (!(o instanceof Person)) return false;
         Person person = (Person) o;
-        return age == person.age && firstName.equals(person.firstName) && lastName.equals(person.lastName) && ssn.equals(person.ssn);
+        return ssn.equals(person.ssn);
     }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(firstName, lastName, age, ssn);
-    }
+//    @Override
+//    public int hashCode() {
+//        return Objects.hash(firstName, lastName, age, ssn);
+//    }
 }
