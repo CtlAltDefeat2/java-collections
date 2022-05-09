@@ -95,7 +95,7 @@ Output:
 test a is This 
 ```
 
-The `WordReverser` wraps (contains) a stack to aid in reversing the words.
+The `WordReverser` wraps (contains) a `Stack` to aid in reversing the words.
 
 #### Part B
 
