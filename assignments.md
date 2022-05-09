@@ -80,6 +80,8 @@ so that the `HashSet` can identity unique persons.
 
 # Ex. 4 WordReverser
 
+#### Part A
+
 Create a class called `WordReverser` that can be consumed in the following manner:
 
 ```java
@@ -94,6 +96,22 @@ test a is This
 ```
 
 The `WordReverser` wraps (contains) a stack to aid in reversing the words.
+
+#### Part B
+
+Add a method called `getWordCount()` that returns the number of words in the sentence.
+```java
+var wordReverser = new WordReverser("This is a test");
+wordReverser.reverseWords();
+System.out.println(wordReverser.getReversedWords());
+System.out.println(wordReverser.getWordCount());
+```
+
+Output:
+```
+test a is This 
+4
+```
 
 # Ex. 5 
 
