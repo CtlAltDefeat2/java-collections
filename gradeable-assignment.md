@@ -7,12 +7,12 @@ In 2006 Amazon released a product called S3.  S3 stands for Simple Storage Solut
 You will create an `S3BillingCalculator` that creates invoices for customers that
 store their data in S3. 
 
-To make our math easy, the pricing model for this assigment is the following:
+To make our math easy, the pricing model for this assignment is the following:
 - Storage: $0.10 per GB
 - GET Requests: $0.50 cents per 1000 requests
 - PUT Requests: $0.25 cents per 1000 requests
 
-The constructor for the `S3BillingCalculator` takes three arguements:
+The constructor for the `S3BillingCalculator` takes three arguments:
 - float: price per GB
 - float: cost per 1000 put requests
 - float: cost per 1000 get requests
