@@ -61,7 +61,7 @@ public class S3BillingCalculator implements S3Calculatable {
         s3BillingItem.incrementGetRequests(number);
     }
 
-    public Invoice calculateStorageCost(int userId) {
+    public Invoice createInvoice(int userId) {
         Invoice retval = new Invoice(userId);
         var S3BillingItem = s3BillingMap.get(userId);
         retval.setTotalStorageCost(S3BillingItem.getStorage() * storageCost);

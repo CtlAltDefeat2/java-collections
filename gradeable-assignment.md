@@ -28,7 +28,7 @@ public interface S3Calculatable {
 
     void addGetRequests(int userId, int number);
 
-    Invoice calculateStorageCost(int userId);
+    Invoice createInvoice(int userId);
 }
 ```
 
@@ -43,8 +43,8 @@ s3BillingCalculator.addStorageGB(2222, 2);
 s3BillingCalculator.addGetRequests(2222, 2000);
 s3BillingCalculator.addPutRequests(2222, 2000);
 
-var invoice1 = s3BillingCalculator.calculateStorageCost(1111);
-var invoice2 = s3BillingCalculator.calculateStorageCost(2222);
+var invoice1 = s3BillingCalculator.createInvoice(1111);
+var invoice2 = s3BillingCalculator.createInvoice(2222);
 
 System.out.println(invoice1);
 System.out.println(invoice2);

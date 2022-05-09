@@ -8,5 +8,5 @@ public interface S3Calculatable {
 
     void addGetRequests(int userId, int number);
 
-    Invoice calculateStorageCost(int userId);
+    Invoice createInvoice(int userId);
 }
