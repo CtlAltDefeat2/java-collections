@@ -13,10 +13,6 @@ public class Person {
         this.age = age;
         this.ssn = ssn;
     }
-    // Methods
-    public String getSsn() {
-        return ssn;
-    }
     // Overrides
     @Override
     public boolean equals(Object object) {
