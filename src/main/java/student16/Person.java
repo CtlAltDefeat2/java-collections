@@ -1,13 +1,30 @@
 package student16;
 
-public class Person {
-    private int person;
-    private int person1;
-    private int person2;
+import java.util.Objects;
 
-    public Person(int person, int person1, int person2) {
-        this.person = person;
-        this.person1 = person1;
-        this.person2 = person2;
+public class Person {
+    private String name;
+    private int age;
+    private String ssn;
+
+
+    public Person(String name, String smith, int age, String ssn) {
+        this.name = name;
+        this.age = age;
+        this.ssn = ssn;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Person)) return false;
+        Person person = (Person) o;
+        return ssn.equals(person.ssn);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, age, ssn);
     }
 }
+
