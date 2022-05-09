@@ -34,17 +34,17 @@ public interface S3Calculatable {
 
 Usage:
 ```java
-var bc = new S3BillingCalculator(.10F, .25F, .50F);
-bc.addStorageGB(1111, 1);
-bc.addGetRequests(1111, 1000);
-bc.addPutRequests(1111, 1000);
+var s3BillingCalculator = new S3BillingCalculator(.10F, .25F, .50F);
+s3BillingCalculator.addStorageGB(1111, 1);
+s3BillingCalculator.addGetRequests(1111, 1000);
+s3BillingCalculator.addPutRequests(1111, 1000);
 
-bc.addStorageGB(2222, 2);
-bc.addGetRequests(2222, 2000);
-bc.addPutRequests(2222, 2000);
+s3BillingCalculator.addStorageGB(2222, 2);
+s3BillingCalculator.addGetRequests(2222, 2000);
+s3BillingCalculator.addPutRequests(2222, 2000);
 
-var invoice1 = bc.calculateStorageCost(1111);
-var invoice2 = bc.calculateStorageCost(2222);
+var invoice1 = s3BillingCalculator.calculateStorageCost(1111);
+var invoice2 = s3BillingCalculator.calculateStorageCost(2222);
 
 System.out.println(invoice1);
 System.out.println(invoice2);
