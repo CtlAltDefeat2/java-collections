@@ -16,9 +16,12 @@ public class WordCounter {
         for (String word : words) {
             hashMap.merge(word, 1, Integer::sum);
         }
-        hashMap.forEach((key, value) -> System.out.println(key + " " + value));
+        hashMap.entrySet().forEach(entry -> {
+            System.out.println(entry.getKey() + " " + entry.getValue());
+        });
     }
     public void countWords() {
+
     }
     public String getWordCount() {
         return " ";

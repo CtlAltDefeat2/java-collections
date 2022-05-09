@@ -21,6 +21,10 @@ public class Person {
         this.ssn = ssn;
     }
 
+    public Person() {
+
+    }
+
     @Override
     public boolean equals(Object obj) {
         if(obj == this){
@@ -30,6 +34,6 @@ public class Person {
             return false;
         }
         Person p = (Person) obj;
-        return CharSequence.compare(p.ssn, this.ssn) == 0;
+        return ssn.equals(p.ssn);
     }
 }
