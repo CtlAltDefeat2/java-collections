@@ -10,9 +10,7 @@ public class Person {
         this.name = name;
         this.age = age;
         this.ssn = ssn;
-
     }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -21,11 +19,8 @@ public class Person {
        // return age == person.age && ssn == person.ssn && Objects.equals(name, person.name);
         return ssn.equals(person.ssn);
     }
-
     @Override
     public int hashCode() {
         return Objects.hash(name, age, ssn);
     }
-
-
 }
