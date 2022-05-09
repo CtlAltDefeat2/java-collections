@@ -1,6 +1,7 @@
 package student14;
 
 import java.util.HashMap;
+import java.util.Map;
 
 public class WordCounter {
 
@@ -13,31 +14,22 @@ public class WordCounter {
     }
 
     public void countWords() {
-            String[] wordsList = inputString.toLowerCase().split(" ");
-
-            for (String word: wordsList){
-                Integer integer = wordCounter.get(word);
-                if(integer == null){
-                    wordCounter.put(word,1);
-                }
-                else{
-                    wordCounter.put(word,integer+1);
-                }
+        String[] wordsList = inputString.toLowerCase().split(" ");
+        for (String word : wordsList) {
+            Integer integer = wordCounter.get(word);
+            if (integer == null) {
+                wordCounter.put(word, 1);
+            } else {
+                wordCounter.put(word, integer + 1);
             }
-            System.out.println(wordCounter);
         }
-    public String getWordCount() {
-    var string = " ";
-        string = wordCounter.toString();
-
-        return string;
+//        System.out.println(wordCounter);
     }
-//
-//    @Override
-//    public String toString() {
-//        return "WordCounter{" +
-//                "wordCounter=" + wordCounter +
-//                ", inputString='" + inputString + '\'' +
-//                '}';
-//    }
+    public String getWordCount() {
+        String retVal = "";
+        for (Map.Entry<String, Integer> result : wordCounter.entrySet()) {
+            retVal += result.getKey() + " " + result.getValue() + '\n';
+        }
+        return retVal;
+    }
 }
