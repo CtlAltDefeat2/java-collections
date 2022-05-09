@@ -11,7 +11,8 @@ public class Main {
     }
 
     private static void ex1() {
-        System.out.println("TODO...");
+
+        System.out.println("this is a test");
     }
 
     private static void ex2() {
