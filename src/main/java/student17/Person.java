@@ -20,4 +20,16 @@ public class Person {
         this.age = age;
         this.ssn = ssn;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if(obj == this){
+            return true;
+        }
+        if(!(obj instanceof Person)){
+            return false;
+        }
+        Person p = (Person) obj;
+        return CharSequence.compare(p.ssn, this.ssn) == 0;
+    }
 }
