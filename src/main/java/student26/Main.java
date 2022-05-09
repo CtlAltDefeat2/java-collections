@@ -2,7 +2,9 @@ package student26;
 
 public class Main {
     public static void main(String[] args) {
+        //TEST
         ex1();
+
         //ex2();
         //ex3();
         //ex4();
