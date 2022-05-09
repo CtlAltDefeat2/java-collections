@@ -1,9 +1,10 @@
 package student21;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        ex1();
-        //ex2();
+        //ex1();
+        ex2();
         //ex3();
         //ex4();
         //ex5();
@@ -26,7 +27,12 @@ public class Main {
     }
 
     private static void ex2() {
-        System.out.println("TODO...");
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Please enter your string: ");
+        var inputString = scanner.nextLine();
+        var wordCounter = new WordCounter(inputString);
+
+
     }
 
     private static void ex3() {
