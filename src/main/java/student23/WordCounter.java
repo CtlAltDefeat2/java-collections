@@ -7,7 +7,6 @@ import java.util.StringTokenizer;
 public class WordCounter {
     StringTokenizer stringTokenizer;
     HashMap<String, Integer> hashmap = new HashMap<>();
-    Map.Entry<String, Integer> entry;
 
     public WordCounter(String inputString) {
         stringTokenizer = new StringTokenizer(inputString);
@@ -36,5 +35,6 @@ public class WordCounter {
             output += entry.getKey() + " " + entry.getValue() + "\n";
         }
         return output;
+
     }
 }

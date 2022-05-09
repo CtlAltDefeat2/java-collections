@@ -21,7 +21,7 @@ public class Person {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Person person = (Person) o;
-        return age == person.age && FirstName.equals(person.FirstName) && LastName.equals(person.LastName) && ssn.equals(person.ssn);
+        return ssn.equals(person.ssn);
     }
 
     @Override

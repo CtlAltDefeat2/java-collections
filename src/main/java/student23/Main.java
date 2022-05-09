@@ -2,8 +2,8 @@ package student23;
 
 public class Main {
     public static void main(String[] args) {
-        //ex1();
-        ex2();
+         ex1();
+        //ex2();
         //ex3();
         //ex4();
         //ex5();
