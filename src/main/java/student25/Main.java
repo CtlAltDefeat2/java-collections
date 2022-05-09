@@ -1,6 +1,6 @@
 package student25;
 
-public class Main {
+public class Main { // Wendy
     public static void main(String[] args) {
         ex1();
         //ex2();
