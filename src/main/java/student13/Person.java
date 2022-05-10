@@ -23,6 +23,22 @@ public class Person {
         this.ssn = ssn;
     }
 
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public String getSsn() {
+        return ssn;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -31,8 +47,16 @@ public class Person {
         return ssn.equals(person.ssn);
     }
 
-//    @Override
-//    public int hashCode() {
-//        return Objects.hash(firstName, lastName, age, ssn);
-//    }
+    @Override
+    public int hashCode() {
+        return Objects.hash(firstName, lastName, age, ssn);
+    }
+
+    @Override
+    public String toString() {
+        return firstName + " " +
+                lastName + " " +
+                age + " " +
+                ssn;
+    }
 }
