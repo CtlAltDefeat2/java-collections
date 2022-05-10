@@ -56,6 +56,7 @@ public class Main { // Wendy
         var wordReverser = new WordReverser("This is a test");
         wordReverser.reverseWords();
         System.out.println(wordReverser.getReversedWords());
+        System.out.println(wordReverser.getWordCount());
     }
 
     private static void ex5() {
