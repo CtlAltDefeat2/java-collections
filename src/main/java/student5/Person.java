@@ -29,7 +29,7 @@ public class Person {
     public String getSsn() {
         return ssn;
     }
-
+    // Overrides
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -37,12 +37,10 @@ public class Person {
         Person person = (Person) o;
         return ssn == person.ssn;
     }
-
     @Override
     public int hashCode() {
         return Objects.hash(firstName, lastName, age, ssn);
     }
-
     @Override
     public String toString() {
         return firstName + " " + lastName + ", " + age + ", " + ssn;
