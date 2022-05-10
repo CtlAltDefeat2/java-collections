@@ -1,7 +1,7 @@
 # Gradeable Assignment
 
 # History
-In 2006 Amazon released a product called S3.  S3 stands for Simple Storage Solution and it is a cloud based flat object store, it is NOT hierarchical. S3 contains buckets in which users can upload an "unlimited" amount of files to the cloud.  Users are charged based on the size of the file and how many times they upload or download files from their S3 bucket(s).  In 2008 the price to store 1 GB (GibaByte) of data was roughly 10 cents per GB.  Now it's as low as 1 cent per GB.
+In 2006 Amazon released a product called S3.  S3 stands for Simple Storage Solution and it is a cloud based flat object store, it is NOT hierarchical. S3 contains buckets in which users can upload an "unlimited" amount of files to the cloud.  Users are charged based on the size of the file and how many times they upload or download files from their S3 bucket(s).  In 2008 the price to store 1 GB (GigaByte) of data was roughly 10 cents per GB.  Now it's as low as 1 cent per GB.
 
 # Assignment
 Create an `S3BillingCalculator` that creates invoices for customers that store their data in S3. The `S3BillingCalculator` must use a `HashMap` to store the data for each user.
