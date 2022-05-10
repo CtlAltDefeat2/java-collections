@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        ex3();
+        ex4();
 
 
 
@@ -52,17 +52,19 @@ public class Main {
         System.out.println(personDeDuper.getUniquePeople());
 
 
-
-
-
     }
 
     private static void ex4() {
-        System.out.println("TODO...");
+
+        var wordReverser= new WordReverser("This is a test");
+        wordReverser.reverseWords();
+        System.out.println(wordReverser.getReversedWords());
+        System.out.println(wordReverser.getWordCount());
+
     }
 
     private static void ex5() {
-        System.out.println("TODO...");
+
     }
 
     private static void ex6() {

@@ -42,8 +42,5 @@ public class Person {
     public int hashCode() {
         return Objects.hash(getName(), getLastname(), getAge(), getSSN());
     }
-    @Override
-    public String toString() {
-        return name+ " " + lastname + ", " + age + ", " + SSN + '\n';
-    }
+
 }
