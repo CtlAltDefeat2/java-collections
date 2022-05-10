@@ -3,9 +3,9 @@ package student24;
 public class Main {
     public static void main(String[] args) {
         //ex1();
-        ex2();
+        //ex2();
         //ex3();
-        //ex4();
+        ex4();
         //ex5();
         //ex6();
     }
@@ -32,11 +32,27 @@ public class Main {
     }
 
     private static void ex3() {
-        System.out.println("TODO...");
+
+       var p = new Person("Alice", "Jones",11,"111-11-1111");
+       var p1= new Person("Alice", "Jones",11,"111-11-1111");
+       var p2 = new Person("Bob","Smith", 22 ,"222-22-2222");
+       var p3 = new Person("Bob", "Smith",22,"222-22-2222");
+
+       var personDeDuper = new PersonDeDuper();
+       personDeDuper.addPerson(p);
+       personDeDuper.addPerson(p1);
+       personDeDuper.addPerson(p2);
+       personDeDuper.addPerson(p3);
+
+        System.out.println(personDeDuper.getUniquePeople());
     }
 
     private static void ex4() {
-        System.out.println("TODO...");
+
+       var wordReverser = new WordReverser("This is a test");
+       wordReverser.reverseWords();
+        System.out.println(wordReverser.getReversedWords());
+        System.out.println(wordReverser.getWordCount());
     }
 
     private static void ex5() {
