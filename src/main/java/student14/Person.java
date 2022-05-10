@@ -18,6 +18,10 @@ public class Person {
     }
 
     //methods
+    public String getName(){
+        return firstName+lastName;
+    }
+
     //overrides
 
     @Override
@@ -25,12 +29,21 @@ public class Person {
         if (this == o) return true;
         if (!(o instanceof Person)) return false;
         Person person = (Person) o;
-        return Objects.equals(ssn, person.ssn);
-
+        return ssn == person.ssn;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(firstName, lastName, age, ssn);
+        return Objects.hash(firstName,lastName, age, ssn);
+    }
+
+    @Override
+    public String toString() {
+        return
+                firstName + " " +
+                        lastName + " " +
+                        age + " " +
+                        ssn + " " +
+                        '\n';
     }
 }
