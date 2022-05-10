@@ -21,7 +21,8 @@ public class PersonDeDuper extends Person{
         uniquePeople(people);
         var retval = "";
         for (Person person: personSet){
-            retval += person.getFirstName() + " " + person.getLastName() + ", " + person.getSsn() + "\n";
+            //retval += person.getFirstName() + " " + person.getLastName() + ", " + person.getSsn() + "\n";
+            retval += person + "\n";
         }
         return retval;
     }

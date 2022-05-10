@@ -44,6 +44,7 @@ public class Person {
         return ssn;
     }
 
+
     //
     //Overrides
     //
@@ -62,7 +63,8 @@ public class Person {
 
     @Override
     public String toString() {
-        return  firstName + " " + lastName + ", " +
+        return  firstName + " " + lastName + ", " + age + ", " +
                 ssn + "\n";
     }
+
 }
