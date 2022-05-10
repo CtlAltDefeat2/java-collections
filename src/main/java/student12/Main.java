@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
         //ex1();
         //ex2();
-        //ex3();
+        ex3();
         //ex4();
         //ex5();
         //ex6();
@@ -33,7 +33,7 @@ public class Main {
     }
 
     private static void ex3() {
-        System.out.println("TODO...");
+        System.out.println("Ex 3.)");
         var p = new Person("Alice", "Jones", 11, "111-11-1111");
         var p1 = new Person("Alice", "Jones", 11, "111-11-1111");
         var p2 = new Person("Bob", "Smith", 22, "222-22-2222");

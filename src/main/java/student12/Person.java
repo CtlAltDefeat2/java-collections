@@ -1,15 +1,17 @@
 package student12;
 
+import java.util.ArrayList;
 import java.util.Objects;
 
 public class Person {
     //
     //Data Members
     //
-    private String firstName;
+    public String firstName;
     private String lastName;
     private int age;
     private String ssn;
+    public ArrayList<Person> people = new ArrayList();
 
     //
     //Constructors
@@ -17,18 +19,34 @@ public class Person {
     Person(){
     }
 
-    Person(String firstName, String lastName, int age, String ssn){
+    Person(String firstName, String lastName, int age, String ssn) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.age = age;
         this.ssn = ssn;
+
+
+    }
+    //
+    //Accessors
+    //
+
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public String getSsn() {
+        return ssn;
     }
 
     //
     //Overrides
     //
-
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -40,5 +58,11 @@ public class Person {
     @Override
     public int hashCode() {
         return Objects.hash(firstName, lastName, age, ssn);
+    }
+
+    @Override
+    public String toString() {
+        return  firstName + " " + lastName + ", " +
+                ssn + "\n";
     }
 }
