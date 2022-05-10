@@ -50,7 +50,6 @@ public class Main {
     private static void ex5() {
         System.out.println("TODO...");
     }
-
     private static void ex6() {
         System.out.println("TODO...");
     }

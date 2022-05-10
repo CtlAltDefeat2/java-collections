@@ -2,12 +2,11 @@ package student5;
 
 import java.util.HashSet;
 
-public class PersonDeDuper extends Person {  //use hashsets
+public class PersonDeDuper extends Person {
     // Variable Declarations
     private HashSet<Person> personSet = new HashSet<>();
     // Constructors
     public PersonDeDuper () {}
-    // Accessors
     // Methods
     public void addPerson(Person person) {
         personSet.add(person);
@@ -19,5 +18,4 @@ public class PersonDeDuper extends Person {  //use hashsets
         }
         return returnValue;
     }
-    // Overrides
 }

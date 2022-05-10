@@ -7,13 +7,11 @@ public class WordCounter {
     // Variable Declarations
     private String input;
     private Integer wordCount = 1;
-    private String word;
     private Integer integer;
     private Map<String, Integer> countMap = new HashMap<>();
     // Constructors
     public WordCounter (String input) {
         this.input = input;
-
     }
     // Accessors
     public String getWordCount() {
