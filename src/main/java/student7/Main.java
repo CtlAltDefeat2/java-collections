@@ -4,8 +4,8 @@ public class Main {
     public static void main(String[] args) {
         //ex1();
         //ex2();
-        ex3();
-        //ex4();
+        //ex3();
+        ex4();
         //ex5();
         //ex6();
     }
@@ -41,12 +41,14 @@ public class Main {
         personDeDuper.addPerson(p1);
         personDeDuper.addPerson(p2);
         personDeDuper.addPerson(p3);
-
         System.out.println(personDeDuper.getUniquePeople());
     }
 
     private static void ex4() {
-        System.out.println("TODO...");
+        var wordReverser = new WordReverser("This is a test");
+        wordReverser.reverseWords();
+        System.out.println(wordReverser.getReversedWords());
+        System.out.println(wordReverser.getWordCount());
     }
 
     private static void ex5() {
