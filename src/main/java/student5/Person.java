@@ -1,5 +1,7 @@
 package student5;
 
+import java.util.Objects;
+
 public class Person {
     // Variable Declarations
     private String firstName;
@@ -7,27 +9,42 @@ public class Person {
     private int age;
     private String ssn;
     // Constructors
+    public Person () {}
     public Person (String firstName, String lastName, int age, String ssn) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.age = age;
         this.ssn = ssn;
     }
-    // Overrides
+    // Accessors
+    public String getFirstName() {
+        return firstName;
+    }
+    public String getLastName() {
+        return lastName;
+    }
+    public int getAge() {
+        return age;
+    }
+    public String getSsn() {
+        return ssn;
+    }
+
     @Override
-    public boolean equals(Object object) {
-        boolean isItTrue = false;
-        if (this == object) {
-            isItTrue = true;
-        }
-        if (object == null) {
-            isItTrue = false;
-        }
-        if (object instanceof Person) {
-            Person person = (Person) object;
-            if (person.ssn == this.ssn) {
-                isItTrue = true;
-            }
-        } return isItTrue;
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Person person = (Person) o;
+        return ssn == person.ssn;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(firstName, lastName, age, ssn);
+    }
+
+    @Override
+    public String toString() {
+        return firstName + " " + lastName + ", " + age + ", " + ssn;
     }
 }
