@@ -29,4 +29,13 @@ public class Person {
     public int hashCode() {
         return Objects.hash(ssn);
     }
+
+    @Override
+    public String toString() {
+        return
+                firstName + ' ' +
+                lastName + ' ' +
+                age +
+                ssn + ' ' ;
+    }
 }
