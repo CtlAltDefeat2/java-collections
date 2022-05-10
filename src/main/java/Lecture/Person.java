@@ -29,4 +29,24 @@ public final class Person {
     //
 
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Person)) return false;
+        Person person = (Person) o;
+        return age == person.age && getName().equals(person.getName());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(age, name);
+    }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "age=" + age +
+                ", name='" + name + '\'' +
+                '}';
+    }
 }
