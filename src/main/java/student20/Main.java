@@ -3,17 +3,15 @@ package student20;
 public class Main {
     public static void main(String[] args) {
         //ex1();
-        ex2();
+        //ex2();
         //ex3();
-        //ex4();
-        //ex5();
-        //ex6();
+        ex4();
     }
 
     private static void ex1() {
-        var p = new Person("Alexis", "Maddison", 11, "123-45-1234");
-        var p1 = new Person("Tala", "Domon", 22, "123-45-1234");
-        var p2 = new Person("Solstice", "Salem", 22, "000-00-0000");
+        var p = new Person("Tom", "Thumb", 11, "123-45-1234");
+        var p1 = new Person("Jon", "Smith", 22, "123-45-1234");
+        var p2 = new Person("Jon", "Smith", 22, "000-00-0000");
 
         if (p.equals(p1)) {
             System.out.printf("Yes");
@@ -24,18 +22,32 @@ public class Main {
     }
 
     private static void ex2() {
-        var inputString = "I own two dogs and Four cats.";
+        var inputString = "The water main broke on water street on the day before my birthday";
         var wordCounter = new WordCounter(inputString);
         wordCounter.countWords();
         System.out.println(wordCounter.getWordCount());
     }
 
     private static void ex3() {
-        System.out.println("TODO...");
+        var p = new Person("Alice", "Jones", 11, "111-11-1111");
+        var p1 = new Person("Alice", "Jones", 11, "111-11-1111");
+        var p2 = new Person("Bob", "Smith", 22, "222-22-2222");
+        var p3 = new Person("Bob", "Smith", 22, "222-22-2222");
+
+        var personDeDuper = new PersonDeDuper();
+        personDeDuper.addPerson(p);
+        personDeDuper.addPerson(p1);
+        personDeDuper.addPerson(p2);
+        personDeDuper.addPerson(p3);
+
+        System.out.println(personDeDuper.getUniquePeople());
     }
 
     private static void ex4() {
-        System.out.println("TODO...");
+        var wordReverser = new WordReverser("This is a test");
+        wordReverser.reverseWords();
+        System.out.println(wordReverser.getReversedWords());
+        System.out.println(wordReverser.getWordCount());
     }
 
     private static void ex5() {
