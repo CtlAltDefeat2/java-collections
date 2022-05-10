@@ -4,8 +4,8 @@ public class Main {
     public static void main(String[] args) {
         //ex1();
         //ex2();
-        ex3();
-        //ex4();
+        //ex3();
+        ex4();
         //ex5();
         //ex6();
     }
@@ -51,6 +51,7 @@ public class Main {
     private static void ex4() {
         System.out.println("Exercise 4");
         var wordReverser = new WordReverser("This is a test");
+        System.out.println(wordReverser.reverseString);
         wordReverser.reverseWords();
         System.out.println(wordReverser.getReversedWords());
     }
