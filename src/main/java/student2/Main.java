@@ -3,8 +3,8 @@ package student2;
 
 public class Main {
     public static void main(String[] args) {
-        ex1();
-        //ex2();
+        //ex1();
+        ex2();
         //ex3();
         //ex4();
         //ex5();
@@ -25,7 +25,11 @@ public class Main {
     }
 
     private static void ex2() {
-        System.out.println("TODO...");
+
+        var inputString = "The water main broke on water street on the day before my birthday";
+        var wordCounter = new WordCounter(inputString);
+        wordCounter.countWords();
+        System.out.println(wordCounter.getWordCount());
     }
 
     private static void ex3() {
