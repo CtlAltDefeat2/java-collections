@@ -1,32 +1,38 @@
 package student17;
 
 import java.util.Arrays;
+import java.util.Stack;
 import java.util.regex.Pattern;
 
 public class WordReverser {
     //
     //Data Members
     //
+    private Stack<String> stack = new Stack();
     private String word;
     //
     //Constructor
     //
     public WordReverser(String word) {
         this.word = word;
-        reverseWords();
+        getReversedWords();
     }
     public String reverseWords() {
         String[] words = word.split("\\s");
-        String result = "";
-        for(int i = 0; i < words.length; i++){
-            if(i == words.length -1)
-                result = words[i] + result;
-            else
-                result = " " + words[i] + result;
+        for(String reverse : words){
+            stack.push(reverse);
         }
-        return result;
+        StringBuilder sb = new StringBuilder();
+        while(!stack.isEmpty()){
+            sb.append(stack.pop()).append(" ");
+        }
+        if(!sb.isEmpty()){
+            sb.setLength(sb.length() - 1);
+        }
+        return sb.toString();
     }
     public String getReversedWords() {
+
         return reverseWords();
     }
     public long getWordCount(){
