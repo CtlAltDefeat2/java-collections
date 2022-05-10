@@ -1,8 +1,9 @@
 package Lecture;
 
 import java.util.Objects;
+import java.util.Stack;
 
-public final class Person {
+public final class Person implements Comparable<Person> {
 
     //
     // Data members
@@ -48,5 +49,16 @@ public final class Person {
                 "age=" + age +
                 ", name='" + name + '\'' +
                 '}';
+    }
+
+    @Override
+    public int compareTo(Person o) {
+        int retval = 0;
+        if (this.age > o.age) {
+            retval = 1;
+        } else {
+            retval = -1;
+        }
+        return retval;
     }
 }

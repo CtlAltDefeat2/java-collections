@@ -8,7 +8,49 @@ public class Main {
         // hashMap();
 
         //sets();
-        stacks();
+        //stacks();
+        //queues();
+        sort();
+    }
+
+    private static void queues() {
+        // add
+        // remove
+        // poll
+        // peek
+        // contains
+
+        var p1 = new Person("Joe", 11);
+        var p2 = new Person("Joe", 22);
+        var p3 = new Person("Joe", 33);
+
+        Queue<Person> personQueue = new LinkedList<Person>();
+        personQueue.add(p1);
+        personQueue.add(p2);
+        personQueue.add(p3);
+
+        var p =  personQueue.peek();
+        System.out.println(p);
+        personQueue.remove();
+        personQueue.poll();
+
+        System.out.println(personQueue);
+    }
+
+    private static void sort() {
+        var p1 = new Person("Joe", 11);
+        var p2 = new Person("Joe", 10);
+        var p3 = new Person("Joe", 13);
+        var p4 = new Person("Joe", 3);
+
+        var list = new ArrayList<Person>();
+        list.add(p1);
+        list.add(p2);
+        list.add(p3);
+        list.add(p4);
+
+        Collections.sort(list);
+        System.out.println(list);
     }
 
     private static void sets() {
@@ -55,20 +97,6 @@ public class Main {
         // peek
         //
 
-        var s3BillingCalculator = new S3BillingCalculator(.10F, .25F, .50F);
-        s3BillingCalculator.addStorageGB(1111, 1);
-        s3BillingCalculator.addGetRequests(1111, 1000);
-        s3BillingCalculator.addPutRequests(1111, 1000);
-
-        s3BillingCalculator.addStorageGB(2222, 2);
-        s3BillingCalculator.addGetRequests(2222, 2000);
-        s3BillingCalculator.addPutRequests(2222, 2000);
-
-        var invoice1 = s3BillingCalculator.createInvoice(1111);
-        var invoice2 = s3BillingCalculator.createInvoice(2222);
-
-        System.out.println(invoice1);
-        System.out.println(invoice2);
     }
 
     private static void hashMap() { // AKA Dictionary
