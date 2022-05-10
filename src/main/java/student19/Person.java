@@ -5,9 +5,8 @@ public class Person {
     private String name;
     private int age;
     private String ssn;
-
-    public Person(String jon, String smith, int i, String ssn) {
-        this.name = name;
+    public Person(String lName,String fName, int age, String ssn) {
+        this.name = fName + " " + lName;
         this.age = age;
         this.ssn = ssn;
     }
@@ -22,5 +21,10 @@ public class Person {
     @Override
     public int hashCode() {
         return Objects.hash(name, age, ssn);
+    }
+    @Override
+    public String toString() {
+        return name + ", "+ age + ", " + ssn ;
+
     }
 }
