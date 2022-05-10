@@ -9,10 +9,47 @@ public class Person {
     int age;
     String SSN;
 
+    Person() {
+
+
+    }
+
     Person(String fName, String lName, int age, String SSN) {
         this.fName = fName;
         this.lName = lName;
         this.age = age;
+        this.SSN = SSN;
+    }
+
+    public String getfName() {
+        return fName;
+    }
+
+    public void setfName(String fName) {
+        this.fName = fName;
+    }
+
+    public String getlName() {
+        return lName;
+    }
+
+    public void setlName(String lName) {
+        this.lName = lName;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public String getSSN() {
+        return SSN;
+    }
+
+    public void setSSN(String SSN) {
         this.SSN = SSN;
     }
 
@@ -26,6 +63,6 @@ public class Person {
 
     @Override
     public int hashCode() {
-        return Objects.hash(SSN);
+        return Objects.hash(fName, lName, age, SSN);
     }
 }
