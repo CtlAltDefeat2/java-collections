@@ -6,8 +6,11 @@ import java.util.StringTokenizer;
 public class WordReverser {
     private final Stack<String> s = new Stack<String>();
     private String str = new String();
+    private int wordCount = 0;
+
     public WordReverser(String str) {
-        var st = new StringTokenizer(str);
+        var st = new StringTokenizer(str," ");
+        wordCount = st.countTokens();
         while (st.hasMoreTokens())
         {
             s.push(st.nextToken());
@@ -16,10 +19,15 @@ public class WordReverser {
         public void reverseWords()
     {
             while (!s.isEmpty())
-            {str += s.pop()+ " ";
+            {
+                str += s.pop()+ " " ;
             }
     }
         public String getReversedWords () {
-            return str;
+            return str ;
         }
+
+    public int getWordCount() {
+        return wordCount;
     }
+}
