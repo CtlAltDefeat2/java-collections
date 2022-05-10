@@ -20,8 +20,8 @@ public class PersonDeDuper {
 
 //  Similar to bacon the "pork" value in here represents the person object passing through the argument
     public String getUniquePeople() {
-        String retVal = "";
-       for (Person pork: personSet) { // for each Person as p in personSet
+        String retVal = ""; //This is the string that will be sent back once this method is called,
+       for (Person pork: personSet) { // for each Person as pork in personSet
            retVal+= pork.getFirstName()+ " " +pork.getLastName() + " " + pork.getAge() + " " + pork.getSsn() + '\n'; // do something with p
 
        }
