@@ -14,6 +14,10 @@ public class Person {
         this.ssn = ssn;
     }
 
+    public Person() {
+
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -25,6 +29,15 @@ public class Person {
     @Override
     public int hashCode() {
         return Objects.hash(name, age, ssn);
+    }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                ", ssn='" + ssn + '\'' +
+                '}';
     }
 }
 
