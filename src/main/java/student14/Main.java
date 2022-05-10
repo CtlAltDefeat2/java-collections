@@ -49,11 +49,16 @@ public class Main {
     }
 
     private static void ex4() {
-        System.out.println("Exercise 4");
+//        System.out.println("Exercise 4 Part A");
+//        var wordReverser = new WordReverser("This is a test");
+//        System.out.println(wordReverser.reverseString);
+//        wordReverser.reverseWords();
+//        System.out.println(wordReverser.getReversedWords());
+//        System.out.println("Exercise 4 Part B");
         var wordReverser = new WordReverser("This is a test");
-        System.out.println(wordReverser.reverseString);
         wordReverser.reverseWords();
         System.out.println(wordReverser.getReversedWords());
+        System.out.println(wordReverser.getWordCount());
     }
 
     private static void ex5() {
