@@ -1,9 +1,15 @@
 package student26;
 
+import java.util.HashMap;
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
 
-        ex1();
+        ex3();
+
+
+
 
     }
 
@@ -23,11 +29,32 @@ public class Main {
     }
 
     private static void ex2() {
-        System.out.println("TODO...");
+        var inputString = "The water main broke on water street on the day before my birthday";
+        var wordCounter = new WordCounter(inputString);
+        wordCounter.countWords();
+        System.out.println(wordCounter.getWordCount());
+
+
+
     }
 
     private static void ex3() {
-        System.out.println("TODO...");
+        var p = new Person("Alice", "Jones", 11, "111-11-1111");
+        var p1 = new Person("Alice", "Jones", 11, "111-11-1111");
+        var p2 = new Person("Bob", "Smith", 22, "222-22-2222");
+        var p3 = new Person("Bob", "Smith", 22, "222-22-2222");
+
+        var personDeDuper = new PersonDeDuper();
+        personDeDuper.addPerson(p);
+        personDeDuper.addPerson(p1);
+        personDeDuper.addPerson(p2);
+        personDeDuper.addPerson(p3);
+        System.out.println(personDeDuper.getUniquePeople());
+
+
+
+
+
     }
 
     private static void ex4() {
