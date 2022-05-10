@@ -24,10 +24,12 @@ public class Main {
         var p2 = new Person("Joe", 22);
         var p3 = new Person("Joe", 33);
 
-        Queue<Person> personQueue = new LinkedList<Person>();
+        var personQueue = new LinkedList<Person>();
+        Queue<Person> personQueue2 = new LinkedList<Person>();
         personQueue.add(p1);
         personQueue.add(p2);
         personQueue.add(p3);
+
 
         var p =  personQueue.peek();
         System.out.println(p);
