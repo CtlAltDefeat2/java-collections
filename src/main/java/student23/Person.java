@@ -8,12 +8,26 @@ public class Person {
     String LastName = "";
     int age = 0;
     String ssn ="";
-
+    String name = "";
     public Person(String firstName, String lastName, int age, String ssn) {
         FirstName = firstName;
         LastName = lastName;
         this.age = age;
         this.ssn = ssn;
+    }
+
+
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getAge() {
+        return age;
     }
 
     @Override
