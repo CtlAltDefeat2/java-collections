@@ -1,7 +1,6 @@
 package student25;
 
 import java.util.ArrayList;
-import java.util.Objects;
 
 public class Car implements Comparable <Car> {
     private String make;
@@ -9,7 +8,6 @@ public class Car implements Comparable <Car> {
     private float price;
     private String color;
     private int miles;
-    // private final ArrayList<Car> carList = new ArrayList<>();
 
 
     public Car(String make, String model, float price, String color, int miles) {
@@ -18,6 +16,7 @@ public class Car implements Comparable <Car> {
         this.price = price;
         this.color = color;
         this.miles = miles;
+
     }
 
 
@@ -30,6 +29,10 @@ public class Car implements Comparable <Car> {
                 ", color='" + color + '\'' +
                 ", miles=" + miles +
                 '}';
+    }
+
+    public float getPrice() {
+        return price;
     }
 
     @Override

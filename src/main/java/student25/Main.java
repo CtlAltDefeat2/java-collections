@@ -1,9 +1,6 @@
 package student25;
-
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.LinkedList;
-import java.util.Queue;
+import java.util.Comparator;
+import java.util.*;
 import java.util.concurrent.TimeUnit;
 
 public class Main { // Wendy
@@ -99,10 +96,12 @@ public class Main { // Wendy
 
 
         private static void ex6() {
+
            var c1 = new Car("Tesla","ROADSTER",10000.0f,"black",200000);
            var c2 = new Car("Chevrolet","EXPRESS 4500",15000.0f, "grey",150000);
            var c3 = new Car("Ford","Escape",12000.0f,"white",80000);
            var c4 = new Car("KIA","Sorento",22000.0f,"red",50000);
+
 
             ArrayList<Car> carList = new ArrayList<>();
             carList.add(c1);
@@ -111,6 +110,18 @@ public class Main { // Wendy
             carList.add(c4);
             Collections.sort(carList);
             System.out.println(carList);
+
+
+            Comparator<Car> priceComparator = new Comparator<Car>() {
+
+                public int compare(Car c1, Car c2) {
+                    return (int) (c1.getPrice() - c2.getPrice());
+                }
+            };
+            carList.sort(priceComparator);
+            for (Car c: carList){
+                System.out.println(c);
+            }
         }
     }
 
