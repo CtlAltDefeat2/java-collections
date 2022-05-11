@@ -29,15 +29,8 @@ public class Car implements Comparable<Car>{
                 ", miles=" + miles +
                 '}';
     }
-
-
     @Override
     public int compareTo(Car o) {
-        if(this.miles > o.miles)
-            return 1;
-        else
-            return -1;
+        return this.miles - o.miles;
     }
-
-
 }

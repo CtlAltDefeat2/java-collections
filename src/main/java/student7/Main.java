@@ -77,9 +77,13 @@ public class Main {
         Car c1 = new Car("Mazda","M3", 30000.00F, "white",5000);
         Car c2 = new Car("Honda", "civic", 3000.00F, "blue",4000);
         Car c3 = new Car("Toyota", "Camry", 4000.00F, "Grey", 1000);
+        Car c4 = new Car("Honda", "Type R", 80000.00F, "blue",2000);
+        Car c5 = new Car("Chevy", "Silverado", 40000.00F, "Grey", 3000);
         carList.add(c1);
         carList.add(c2);
         carList.add(c3);
+        carList.add(c4);
+        carList.add(c5);
         carList.sort(Car::compareTo);
         System.out.println("sort by miles");
         for(Car c : carList){
