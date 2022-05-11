@@ -14,6 +14,12 @@ public class Person {
     //
     //Constructors
     //
+
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
     public Person(String name, String lastName, int age, String ssn) {
         this.name = name;
         this.lastName = lastName;
@@ -37,9 +43,9 @@ public class Person {
     @Override
     public String toString() {
         return
-                name + '\'' +
-                lastName + '\'' +
-                age +
-                ssn + '\'';
+                name + ", " +
+           //     lastName + '\'' +
+                 age;
+           //     ssn + '\'';
     }
 }
