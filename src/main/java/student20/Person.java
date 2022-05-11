@@ -1,56 +1,44 @@
 package student20;
 
+import java.util.LinkedList;
 import java.util.Objects;
+import java.util.Queue;
 
 public class Person {
 
-    String fName;
-    String lName;
-    int age;
-    String SSN;
+    private String name;
+    private String lastname;
+    private int age;
+    private String SSN;
 
-    Person() {
+    Person(){}
 
 
+    public Person  ( String name, String lastname, int age, String SSN) {
+        this.name=name;
+        this.lastname=lastname;
+        this.age=age;
+        this.SSN=SSN;
     }
-
-    Person(String fName, String lName, int age, String SSN) {
-        this.fName = fName;
-        this.lName = lName;
-        this.age = age;
-        this.SSN = SSN;
+    public Person (String name, int age){
+        this.name=name;
+        this.age=age;
     }
+    public String getName() {
 
-    public String getfName() {
-        return fName;
+        return name;
     }
+    public String getLastname() {
 
-    public void setfName(String fName) {
-        this.fName = fName;
+        return lastname;
     }
-
-    public String getlName() {
-        return lName;
-    }
-
-    public void setlName(String lName) {
-        this.lName = lName;
-    }
-
     public int getAge() {
+
         return age;
     }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-
     public String getSSN() {
-        return SSN;
-    }
 
-    public void setSSN(String SSN) {
-        this.SSN = SSN;
+        return SSN;
     }
 
     @Override
@@ -58,11 +46,18 @@ public class Person {
         if (this == o) return true;
         if (!(o instanceof Person)) return false;
         Person person = (Person) o;
-        return SSN.equals(person.SSN);
+        return  this.SSN.equals(person.SSN);
     }
-
     @Override
     public int hashCode() {
-        return Objects.hash(fName, lName, age, SSN);
+
+        return Objects.hash(getName(), getLastname(), getAge(), getSSN());
+    }
+    @Override
+    public String toString() {
+        return "Person{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                '}';
     }
 }

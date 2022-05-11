@@ -1,11 +1,19 @@
 package student20;
 
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Scanner;
+import java.util.concurrent.TimeUnit;
+
 public class Main {
-    public static void main(String[] args) {
-        //ex1();
-        //ex2();
-        //ex3();
-        ex4();
+    public static void main(String[] args) throws InterruptedException {
+
+        ex5();
+
+
+
+
     }
 
     private static void ex1() {
@@ -19,6 +27,8 @@ public class Main {
         if (p1.equals(p2)) {
             System.out.println("Here");
         }
+
+
     }
 
     private static void ex2() {
@@ -26,6 +36,9 @@ public class Main {
         var wordCounter = new WordCounter(inputString);
         wordCounter.countWords();
         System.out.println(wordCounter.getWordCount());
+
+
+
     }
 
     private static void ex3() {
@@ -39,22 +52,58 @@ public class Main {
         personDeDuper.addPerson(p1);
         personDeDuper.addPerson(p2);
         personDeDuper.addPerson(p3);
-
         System.out.println(personDeDuper.getUniquePeople());
+
+
     }
 
     private static void ex4() {
-        var wordReverser = new WordReverser("This is a test");
+
+        var wordReverser= new WordReverser("This is a test");
         wordReverser.reverseWords();
         System.out.println(wordReverser.getReversedWords());
         System.out.println(wordReverser.getWordCount());
+
     }
 
-    private static void ex5() {
-        System.out.println("TODO...");
+    private static void ex5() throws InterruptedException {
+
+        var p1 = new Person("Alice", 11);
+        var p2 = new Person("Bob", 22);
+        var p3 = new Person("Charlie", 33);
+        var p4 = new Person("Dave", 44);
+        var p5 = new Person("Egar", 55);
+        var p6 = new Person("Fred", 66);
+
+
+        Queue<Person> personque = new LinkedList<Person>();
+        personque.add(p1);
+        personque.add(p2);
+        personque.add(p3);
+        personque.add(p4);
+        personque.add(p5);
+        personque.add(p6);
+
+        while(true) {
+            System.out.println(personque);
+            personque.remove();
+
+            if (personque.isEmpty()){
+                break;
+            }
+            TimeUnit.SECONDS.sleep(2);
+        }
+        System.out.println("Finished");
+
+
+
+
+
     }
 
     private static void ex6() {
+
+
         System.out.println("TODO...");
     }
 }
