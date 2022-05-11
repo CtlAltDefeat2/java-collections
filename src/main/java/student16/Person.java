@@ -4,17 +4,21 @@ import java.util.Objects;
 
 public class Person {
     private String name;
+    private String lastName;
     private int age;
     private String ssn;
 
 
-    public Person(String name, String smith, int age, String ssn) {
+    public Person(String name, String lastName, int age, String ssn) {
         this.name = name;
         this.age = age;
         this.ssn = ssn;
+        this.lastName = lastName;
     }
 
-    public Person() {
+    public Person(String name, int age) {
+    this.age = age;
+    this.name = name;
 
     }
 
@@ -36,7 +40,7 @@ public class Person {
         return "Person{" +
                 "name='" + name + '\'' +
                 ", age=" + age +
-                ", ssn='" + ssn + '\'' +
+               // ", ssn='" + ssn + '\'' +
                 '}';
     }
 }
