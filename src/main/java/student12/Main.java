@@ -1,5 +1,7 @@
 package student12;
 
+import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.concurrent.TimeUnit;
@@ -9,9 +11,9 @@ public class Main {
         //ex1();
         //ex2();
         //ex3();
-//      ex4();
-        ex5();
-        //ex6();
+        //ex4();
+        //ex5();
+        ex6();
     }
 
     private static void ex1() {
@@ -80,6 +82,7 @@ public class Main {
         personQueue.add(p6);
         System.out.println(personQueue);
 
+
         while (!personQueue.isEmpty()) {
             // TODO...
             // Display contents of queue on console.
@@ -96,7 +99,23 @@ public class Main {
 
 
     private static void ex6() {
-        System.out.println("TODO...");
+        System.out.println("Ex 6.)");
+        var cars = new ArrayList<Car>();
+        cars.add(new Car("Ford", "Fusion", 20_000, "grey", 10_000));
+        cars.add(new Car("Chevy", "Silverado", 50_000, "red", 1_500));
+        cars.add(new Car("Toyota", "Prius", 32_500, "blue", 658));
+        cars.add(new Car("Mazda", "Mazda6", 65_000, "white", 18_000));
+        cars.add(new Car("Honda", "Civic", 85_562, "orange", 150_000));
+        Comparator<Car> ageComparator = new Comparator<Car>() {
+            public int compare(Car c1, Car c2) {
+                return c1.getMiles() - c2.getMiles();
+            }
+        };
+        cars.sort(ageComparator);
+        System.out.println(cars);
+
+
+
     }
 }
 
