@@ -1,13 +1,17 @@
 package student2;
 
 
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.concurrent.TimeUnit;
+
 public class Main {
     public static void main(String[] args) {
         //ex1();
         //ex2();
         //ex3();
-        ex4();
-        //ex5();
+        //ex4();
+        ex5();
         //ex6();
     }
 
@@ -56,7 +60,41 @@ public class Main {
     }
 
     private static void ex5() {
-        System.out.println("TODO...");
+
+        var p1 = new Person("Alice", 11);
+        var p2 = new Person("Bob", 22);
+        var p3 = new Person("Charlie", 33);
+        var p4 = new Person("Dave", 44);
+        var p5 = new Person("Egar", 55);
+        var p6 = new Person("Fred", 66);
+
+// TODO: Create queue of people here...
+
+        Queue<Person> q=new LinkedList<>();
+        q.add(p1);
+        q.add(p2);
+        q.add(p3);
+        q.add(p4);
+        q.add(p5);
+        q.add(p6);
+        System.out.println(q);
+        int i=0;
+        while (q.size()>i) {
+            // TODO...
+            // Display contents of queue on console.
+            // Remove first person from queue.
+            // if queue is empty break from loop.
+            try {
+                TimeUnit.SECONDS.sleep(2);
+                q.remove();
+                if (q.size()==0){
+                    break;
+                } else System.out.println(q);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+        }
+        System.out.println("Finished");
     }
 
     private static void ex6() {

@@ -6,6 +6,11 @@ public class Person{
     String firstName, lastName, ssn;
     private Integer age;
 
+    public Person(String firstName, int age) {
+        this.firstName=firstName;
+        this.age=age;
+    }
+
     public String getSsn() {
         return this.ssn;
     }
@@ -32,10 +37,13 @@ public class Person{
     }
 
     @Override
+    //This needs to be modified for the corresponding exercises
     public String toString() {
-        return firstName +" "+
-                lastName + ", " +
+        if (lastName!= null)
+        return firstName +", " +
+                lastName+", "+
                 age+", "+
                 ssn;
+        else return firstName+", "+age;
     }
 }
