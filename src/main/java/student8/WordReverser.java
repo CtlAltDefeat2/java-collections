@@ -15,7 +15,6 @@ public class WordReverser {
             }
         }
 
-
         public Integer getWordCount() {
             return wordCount;
         }

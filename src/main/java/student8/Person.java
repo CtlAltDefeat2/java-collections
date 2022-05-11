@@ -11,7 +11,11 @@ public class Person {
 
     Person() {
 
+    }
 
+    Person(String fName, int age) {
+        this.fName = fName;
+        this.age = age;
     }
 
     Person(String fName, String lName, int age, String SSN) {
@@ -64,5 +68,13 @@ public class Person {
     @Override
     public int hashCode() {
         return Objects.hash(fName, lName, age, SSN);
+    }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "fName='" + fName + '\'' +
+                ", age=" + age +
+                '}';
     }
 }

@@ -1,11 +1,16 @@
 package student8;
 
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.concurrent.TimeUnit;
+
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         //ex1();
         //ex2();
         //ex3();
-        ex4();
+        //ex4();
+        ex5();
     }
 
     private static void ex1() {
@@ -50,8 +55,39 @@ public class Main {
         System.out.println(wordReverser.getWordCount());
     }
 
-    private static void ex5() {
-        System.out.println("TODO...");
+    private static void ex5() throws InterruptedException {
+        var p1 = new Person("Alice", 11);
+        var p2 = new Person("Bob", 22);
+        var p3 = new Person("Charlie", 33);
+        var p4 = new Person("Dave", 44);
+        var p5 = new Person("Egar", 55);
+        var p6 = new Person("Fred", 66);
+
+    // TODO: Create queue of people here...
+
+        Queue<Person> peopleQueue = new LinkedList<Person>();
+        peopleQueue.add(p1);
+        peopleQueue.add(p2);
+        peopleQueue.add(p3);
+        peopleQueue.add(p4);
+        peopleQueue.add(p5);
+        peopleQueue.add(p6);
+
+        while (true) {
+            // TODO...
+            // Display contents of queue on console.
+            System.out.println(peopleQueue.toString());
+            // Remove first person from queue.
+            peopleQueue.remove();
+            // if queue is empty break from loop.
+            if (peopleQueue.isEmpty()) {
+                break;
+            }
+
+            TimeUnit.SECONDS.sleep(2);
+        }
+
+        System.out.println("Finished");
     }
 
     private static void ex6() {
