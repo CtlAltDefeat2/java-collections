@@ -1,5 +1,7 @@
 package student25;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.concurrent.TimeUnit;
@@ -10,8 +12,8 @@ public class Main { // Wendy
         //  ex2();
         //  ex3();
         //  ex4();
-        ex5();
-        //ex6();
+        //ex5();
+        ex6();
     }
 
     private static void ex1() {
@@ -80,7 +82,6 @@ public class Main { // Wendy
         personQueue.add(p4);
         personQueue.add(p5);
         personQueue.add(p6);
-
         // TODO..
         while (!personQueue.isEmpty()) {
             // Display contents of queue on console.
@@ -90,17 +91,26 @@ public class Main { // Wendy
             System.out.println(p);
             // if queue is empty break from loop.
             if (personQueue.isEmpty()) {
-
                 TimeUnit.SECONDS.sleep(2);
             }
-
         }
         System.out.println("Finished");
     }
 
 
         private static void ex6() {
-            System.out.println("TODO...");
+           var c1 = new Car("Tesla","ROADSTER",10000.0f,"black",200000);
+           var c2 = new Car("Chevrolet","EXPRESS 4500",15000.0f, "grey",150000);
+           var c3 = new Car("Ford","Escape",12000.0f,"white",80000);
+           var c4 = new Car("KIA","Sorento",22000.0f,"red",50000);
+
+            ArrayList<Car> carList = new ArrayList<>();
+            carList.add(c1);
+            carList.add(c2);
+            carList.add(c3);
+            carList.add(c4);
+            Collections.sort(carList);
+            System.out.println(carList);
         }
     }
 
