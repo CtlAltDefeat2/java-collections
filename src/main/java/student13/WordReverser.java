@@ -8,11 +8,13 @@ public class WordReverser {
     private ArrayList<String> arrString;
     private Stack<String> reverseOrder;
     private String inputString;
+    private int wordCount;
 
     WordReverser(String inputString) {
         this.inputString = inputString;
         this.arrString = new ArrayList<>();
         this.reverseOrder = new Stack<>();
+        this.wordCount = wordCount;
     }
 
     public void reverseWords() {
@@ -23,16 +25,23 @@ public class WordReverser {
         }
         for (int i = 0; i < arrString.size(); i++){
             reverseOrder.push(arrString.get(i));
-        }
 
+        }
     }
 
     public String getReversedWords() {
         String reverseArr = "";
+
         while(!reverseOrder.isEmpty()) {
             reverseArr += reverseOrder.pop() + " ";
+            wordCount = wordCount + 1;
         }
         return reverseArr;
+    }
+
+    public int getWordCount() {
+
+        return wordCount;
     }
 
 

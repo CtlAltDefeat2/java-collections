@@ -12,8 +12,9 @@ public class Person {
 
     // constructors
 
-    Person() {
-
+    Person(String firstName, int age) {
+        this.firstName = firstName;
+        this.age = age;
     }
 
     Person(String firstName, String lastName, int age, String ssn) {
@@ -44,7 +45,7 @@ public class Person {
         if (this == o) return true;
         if (!(o instanceof Person)) return false;
         Person person = (Person) o;
-        return ssn.equals(person.ssn);
+        return Objects.equals(ssn, person.ssn);
     }
 
     @Override
@@ -54,9 +55,11 @@ public class Person {
 
     @Override
     public String toString() {
-        return firstName + " " +
-                lastName + " " +
-                age + " " +
-                ssn;
+
+//        return firstName + " " +
+//                lastName + " " +
+//                age + " " +
+//                ssn;
+        return firstName + " " + age;
     }
 }
