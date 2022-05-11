@@ -8,6 +8,11 @@ public class Person {
     private int age;
     private String SocialSecurity;
 
+    public Person(String firstName, int age) {
+        this.firstName = firstName;
+        this.age = age;
+    }
+
     public Person(String firstName, String lastName, int age, String socialSecurity) {
         this.firstName = firstName;
         this.lastName = lastName;
@@ -25,11 +30,12 @@ public class Person {
     public int hashCode() {
         return Objects.hash(firstName, lastName, age, SocialSecurity);
     }
+
     @Override
     public String toString() {
-        return  firstName +
-                " " + lastName +
-                " " + age +
-                " " + SocialSecurity;
+        return  firstName + " " +
+                //+ lastName +
+                " " + age;
+                //" " + SocialSecurity;
     }
 }

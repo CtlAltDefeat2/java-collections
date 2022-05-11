@@ -1,13 +1,19 @@
 package student7;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.concurrent.TimeUnit;
+
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         //ex1();
         //ex2();
-        //ex3();
-        ex4();
+       //ex3();
+        //ex4();
         //ex5();
-        //ex6();
+        ex6();
     }
 
     private static void ex1() {
@@ -51,11 +57,46 @@ public class Main {
         System.out.println(wordReverser.getWordCount());
     }
 
-    private static void ex5() {
-        System.out.println("TODO...");
+    private static void ex5() throws InterruptedException {
+        var p1 = new Person("Alice", 11);
+        var p2 = new Person("Bob", 22);
+        var p3 = new Person("Charlie", 33);
+        var p4 = new Person("Dave", 44);
+        var p5 = new Person("Egar", 55);
+        var p6 = new Person("Fred", 66);
+
+
+        Queue<Person> personQueue = new LinkedList<Person>();
+        personQueue.add(p1);
+        personQueue.add(p2);
+        personQueue.add(p3);
+        personQueue.add(p4);
+        personQueue.add(p5);
+        personQueue.add(p6);
+
+        while (true) {
+            if(personQueue.isEmpty()){
+                break;
+            }
+            else
+                System.out.println( personQueue.poll());
+                TimeUnit.SECONDS.sleep(2);
+        }
+        System.out.println("Finished");
     }
 
     private static void ex6() {
-        System.out.println("TODO...");
+        ArrayList<Car> carList = new ArrayList<>();
+        Car c1 = new Car("Mazda","M3", 30000.00F, "white",5000);
+        Car c2 = new Car("Honda", "civic", 3000.00F, "blue",4000);
+        Car c3 = new Car("Toyota", "Camry", 4000.00F, "Grey", 1000);
+        carList.add(c1);
+        carList.add(c2);
+        carList.add(c3);
+        carList.sort(Car::compareTo);
+        for(Car c : carList){
+            System.out.println(c);
+        }
+
     }
 }
