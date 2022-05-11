@@ -1,9 +1,10 @@
 package student2;
 
 
-import java.util.LinkedList;
-import java.util.Queue;
+import java.util.*;
 import java.util.concurrent.TimeUnit;
+
+import static student2.Car.carPriceSorter;
 
 public class Main {
     public static void main(String[] args) {
@@ -11,8 +12,8 @@ public class Main {
         //ex2();
         //ex3();
         //ex4();
-        ex5();
-        //ex6();
+        //ex5();
+        ex6();
     }
 
     private static void ex1() {
@@ -98,6 +99,23 @@ public class Main {
     }
 
     private static void ex6() {
-        System.out.println("TODO...");
+        var c=new Car("Toyota", "Prius", 40000, "black", 115000);
+        var c1=new Car("Chevy", "Equinox", 30000, "gold", 100000);
+        var c2=new Car("Jaguar", "XJ6", 50000, "white", 75000);
+        var c3=new Car("Acura", "MD5", 55000, "blue", 35000);
+        var c4=new Car("Tesla", "Model S", 90000, "red", 350);
+
+        List<Car> carList=new ArrayList<>();
+        carList.add(c);
+        carList.add(c1);
+        carList.add(c2);
+        carList.add(c3);
+        carList.add(c4);
+        Collections.sort(carList);// part a completed here
+        System.out.println(carList);
+        carList.sort(carPriceSorter);
+        for (Car price:carList) {
+            System.out.println(price);// part b completed here
+            }
     }
 }

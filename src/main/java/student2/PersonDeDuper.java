@@ -8,9 +8,9 @@ import java.util.List;
 public class PersonDeDuper {
     private String firstName, lastName, ssn;
     private int age;
-    HashSet<Person> set=new HashSet<Person>();
+    HashSet<Person> set= new HashSet<>();
 
-    List<Person> list1=new ArrayList<Person>();
+    List<Person> list1= new ArrayList<>();
 
     public PersonDeDuper(){
     }
