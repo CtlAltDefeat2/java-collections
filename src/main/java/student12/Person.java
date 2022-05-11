@@ -1,7 +1,9 @@
 package student12;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.Objects;
+import java.util.Queue;
 
 public class Person {
     //
@@ -12,6 +14,7 @@ public class Person {
     private int age;
     private String ssn;
     public ArrayList<Person> people = new ArrayList();
+    public Queue<Person> personQueue = new LinkedList<Person>();
 
     //
     //Constructors
@@ -19,14 +22,22 @@ public class Person {
     Person(){
     }
 
+    Person(String firstName, int age){
+        this.firstName = firstName;
+        this.age = age;
+    }
+
     Person(String firstName, String lastName, int age, String ssn) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.age = age;
         this.ssn = ssn;
-
-
     }
+    //
+    //Methods
+    //
+
+
     //
     //Accessors
     //
@@ -63,8 +74,15 @@ public class Person {
 
     @Override
     public String toString() {
-        return  firstName + " " + lastName + ", " + age + ", " +
-                ssn + "\n";
+        if (lastName == null){
+            return firstName + " " + age;
+        }
+        else {
+            return  firstName + " " + lastName + ", " + age + ", " +
+                    ssn + "\n";
+        }
+
+
     }
 
 }
