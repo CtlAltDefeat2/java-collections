@@ -2,8 +2,6 @@ package student17;
 
 import java.util.Arrays;
 import java.util.Stack;
-import java.util.regex.Pattern;
-
 public class WordReverser {
     //
     //Data Members
@@ -15,7 +13,6 @@ public class WordReverser {
     //
     public WordReverser(String word) {
         this.word = word;
-        getReversedWords();
     }
     public String reverseWords() {
         String[] words = word.split("\\s");
@@ -26,13 +23,9 @@ public class WordReverser {
         while(!stack.isEmpty()){
             sb.append(stack.pop()).append(" ");
         }
-        if(!sb.isEmpty()){
-            sb.setLength(sb.length() - 1);
-        }
         return sb.toString();
     }
     public String getReversedWords() {
-
         return reverseWords();
     }
     public long getWordCount(){

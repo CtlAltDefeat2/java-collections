@@ -1,7 +1,6 @@
 package student17;
 
 import java.util.HashSet;
-import java.util.stream.Collectors;
 
 public class PersonDeDuper extends Person{
     //

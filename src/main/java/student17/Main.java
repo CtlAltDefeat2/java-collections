@@ -1,13 +1,19 @@
 package student17;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.PriorityQueue;
+import java.util.concurrent.TimeUnit;
+
 public class Main {
     public static void main(String[] args) {
         //ex1();
         //ex2();
         //ex3();
-        ex4();
+        //ex4();
         //ex5();
-        //ex6();
+        ex6();
     }
 
     private static void ex1() {
@@ -53,11 +59,52 @@ public class Main {
     }
 
     private static void ex5() {
-        System.out.println("TODO...");
+        var p1 = new Person("Alice", 11);
+        var p2 = new Person("Bob", 22);
+        var p3 = new Person("Charlie", 33);
+        var p4 = new Person("Dave", 44);
+        var p5 = new Person("Edgar", 55);
+        var p6 = new Person("Fred", 66);
+
+        PriorityQueue<String> queue = new PriorityQueue<>();
+        queue.add(p1.toString());
+        queue.add(p2.toString());
+        queue.add(p3.toString());
+        queue.add(p4.toString());
+        queue.add(p5.toString());
+        queue.add(p6.toString());
+
+        try {
+            while (!queue.isEmpty()) {
+                queue.remove();
+                System.out.println(queue);
+                }
+                TimeUnit.SECONDS.sleep(2);
+            } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        System.out.println("Finished");
+    }
+    private static void ex6() {
+        var c1 = new Car("Toyota", "4Runner", 39000.00F, "Black", 123);
+        var c2 = new Car("Ford", "F-150", 32000.00F, "Pearl", 15223);
+        var c3 = new Car("Chevy", "Malibu", 3000.00F, "Red", 123);
+        var c4 = new Car("Hyundia", "Santa-Fe", 16000.00F, "Green", 50459);
+        var c5 = new Car("Toyota", "Pick-Up", 350.00F, "Grey", 299000);
+
+        ArrayList<Car> cars = new ArrayList<>();
+
+        cars.add(c1);
+        cars.add(c2);
+        cars.add(c3);
+        cars.add(c4);
+        cars.add(c5);
+
+        Comparator<Car> priceComparator = (c11, c21) -> (int) (c11.getPrice() - c21.getPrice());
+        cars.sort(priceComparator);
+        System.out.println(cars);
+        }
+
     }
 
-    private static void ex6() {
-        System.out.println("TODO...");
-    }
-}
 
