@@ -101,12 +101,22 @@ public class Main {
         cars.add(c5);
 
         cars.sort(Car::compareTo);
+        System.out.println("Order by miles: ");
         for(Car c : cars){
-            System.out.println(c);
+            System.out.println("\t" + c);
         }
-        Comparator<Car> priceComparator = (c11, c21) -> (int) (c11.getPrice() - c21.getPrice());
+        Comparator<Car> priceComparator = new Comparator<Car>() {
+            public int compare(Car c1, Car c2) {
+                return (int) (c1.getPrice() - c2.getPrice());
+            }
+        };
         cars.sort(priceComparator);
+        System.out.println("Order by price: ");
+        for(Car c : cars){
+            System.out.println("\t" +c);
+        }
+        }
+
     }
-}
 
 
