@@ -1,5 +1,7 @@
 package student24;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.concurrent.TimeUnit;
@@ -10,8 +12,8 @@ public class Main {
         //ex2();
         //ex3();
         //ex4();
-        ex5();
-        //ex6();
+        //ex5();
+        ex6();
     }
 
     private static void ex1() {
@@ -93,6 +95,21 @@ public class Main {
     }
 
     private static void ex6() {
-        System.out.println("TODO...");
+        var c1= new Car("Chevy","Impala", 23000, "Silver", 30000);
+        var c2 = new Car("Nissan","Altima", 29000,"Black",32000);
+        var c3 = new Car("Honda", "Civic", 30000, "Blue", 1900);
+        var c4 = new Car("Honda", "Accord", 10000, "Silver", 60000);
+        var c5 = new Car("Hyundai", "Elantra", 25000, "Red", 29000);
+
+         ArrayList<Car> Car = new ArrayList<Car>();
+         Car.add(c1);
+         Car.add(c2);
+         Car.add(c3);
+         Car.add(c4);
+         Car.add(c5);
+
+        Collections.sort(Car);
+        System.out.println(Car);
+
     }
 }
