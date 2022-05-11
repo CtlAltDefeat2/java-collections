@@ -10,6 +10,10 @@ public class Person {
     private String ssn;
     // Constructors
     public Person () {}
+    public Person (String firstName, int age) {
+        this.firstName = firstName;
+        this.age = age;
+    }
     public Person (String firstName, String lastName, int age, String ssn) {
         this.firstName = firstName;
         this.lastName = lastName;
@@ -43,6 +47,8 @@ public class Person {
     }
     @Override
     public String toString() {
-        return firstName + " " + lastName + ", " + age + ", " + ssn;
+        if (lastName != null || ssn != null) {
+            return firstName + " " + lastName + ", " + age + ", " + ssn;
+        } else return firstName + " " + age;
     }
 }
