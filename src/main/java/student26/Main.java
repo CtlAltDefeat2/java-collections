@@ -1,15 +1,12 @@
 package student26;
 
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.Queue;
-import java.util.Scanner;
+import java.util.*;
 import java.util.concurrent.TimeUnit;
 
 public class Main {
     public static void main(String[] args) throws InterruptedException {
 
-        ex5();
+        ex6();
 
 
 
@@ -96,15 +93,33 @@ public class Main {
         System.out.println("Finished");
 
 
-
-
-
     }
 
     private static void ex6() {
 
+        var c1 = new Car("Nissan","Altima",18000,"green",5000);
+        var c2= new Car ("Honda","Odyssey",15000,"blue",2500);
+        var c3= new Car ("Kia","Sol",25000, "red",3000);
+        var c4 = new Car ("Acura", "ILX",20000,"yellow",5000);
+        var c5 = new Car ("Hyundai", "Elantra", 22000,"Silver", 6000);
 
-        System.out.println("TODO...");
-    }
+        ArrayList <Car> car= new ArrayList<>();
+        car.add(c1);
+        car.add(c2);
+        car.add(c3);
+        car.add(c4);
+        car.add(c5);
+
+        Collections.sort(car);
+
+        for (Car c : car) {
+            System.out.println(c);
+        }
+
+        }
+
+
+
+
 }
 

@@ -10,10 +10,12 @@ public class PersonDeDuper {
     private final HashSet<Person> uniquePeople;
 
     public PersonDeDuper() {
+
         this.uniquePeople = new HashSet<Person>();
     }
 
     public void addPerson(Person person){
+
         uniquePeople.add(person);
     }
     public String getUniquePeople() {
