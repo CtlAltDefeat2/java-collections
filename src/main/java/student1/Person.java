@@ -38,7 +38,17 @@ public class Person {
 
     @Override
     public int hashCode() {
+
         return Objects.hash(socialSecurityNumber);
+    }
+
+    @Override
+    public String toString() {
+        return
+                firstName + " " +
+                lastName + ", " +
+                age +", " +
+                socialSecurityNumber;
     }
 }
 

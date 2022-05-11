@@ -51,8 +51,8 @@ on 2
 
 The `WordCounter` contains a `HashMap` which contains the number of occurrances for each word in the sentence.
 
-# Ex. 3 PersonDeDuper
-Create a class called `PersonDeDuper` that can be consumed in the following manner:
+# Ex. 3 student1.PersonDeDuper
+Create a class called `student1.PersonDeDuper` that can be consumed in the following manner:
 
 ```java
 var p = new Person("Alice", "Jones", 11, "111-11-1111");
@@ -60,7 +60,7 @@ var p1 = new Person("Alice", "Jones", 11, "111-11-1111");
 var p2 = new Person("Bob", "Smith", 22, "222-22-2222");
 var p3 = new Person("Bob", "Smith", 22, "222-22-2222");
 
-var personDeDuper = new PersonDeDuper();
+var personDeDuper = new student1.PersonDeDuper();
 personDeDuper.addPerson(p);
 personDeDuper.addPerson(p1);
 personDeDuper.addPerson(p2);
