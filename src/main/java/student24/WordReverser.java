@@ -4,9 +4,9 @@ import java.util.Stack;
 
 public class WordReverser {
     private String reverseWords;
-    private String word= "";
+    private String word = "";
     private int wordCount;
-   private Stack<String> sentence= new Stack<>();
+    private Stack<String> sentence = new Stack<>();
 
 
     public WordReverser(String reverseWords) {
@@ -15,17 +15,15 @@ public class WordReverser {
 
     public void reverseWords() {
         String[] reverse = reverseWords.split(" ");
-        for(String s: reverse){
+        for (String s : reverse) {
             sentence.push(s);
             wordCount++;
         }
-
-
     }
 
     public String getReversedWords() {
         var word = "";
-        while(!sentence.isEmpty()) {
+        while (!sentence.isEmpty()) {
             word += sentence.pop() + " ";
 
 

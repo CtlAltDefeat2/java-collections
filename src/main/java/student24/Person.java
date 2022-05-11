@@ -8,12 +8,18 @@ public class Person {
     private int age;
     private String ssn;
 
+    public Person(String firstName, int age) {
+        this.firstName = firstName;
+        this.age = age;
+    }
     public Person(String firstName, String lastName, int age, String ssn) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.age = age;
         this.ssn = ssn;
     }
+
+
 
     @Override
     public boolean equals(Object o) {
@@ -30,6 +36,6 @@ public class Person {
 
     @Override
     public String toString() {
-        return firstName + " " + lastName + ",  " + age + ", " + ssn;
+        return firstName + " "  + age  ;
     }
 }
