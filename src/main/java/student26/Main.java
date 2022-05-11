@@ -85,9 +85,9 @@ public class Main {
             System.out.println(personque);
             personque.remove();
 
-        if (personque.isEmpty()){
-            break;
-        }
+            if (personque.isEmpty()){
+                break;
+            }
             TimeUnit.SECONDS.sleep(2);
         }
         System.out.println("Finished");
@@ -110,15 +110,21 @@ public class Main {
         car.add(c4);
         car.add(c5);
 
-        Collections.sort(car);
+        // Collections.sort(car);
+
+        Comparator<Car> priceComparator= new Comparator<Car>() {
+            @Override
+            public int compare(Car c1, Car c2) {
+                return c1.getPrice() -c2.getPrice();
+            }
+        };
+        car.sort(priceComparator);
 
         for (Car c : car) {
             System.out.println(c);
         }
 
-        }
-
-
+    }
 
 
 }

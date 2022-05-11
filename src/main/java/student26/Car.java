@@ -2,6 +2,7 @@ package student26;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Comparator;
 
 public class Car implements  Comparable <Car>{
 
@@ -22,6 +23,9 @@ public Car(){}
         this.miles = miles;
     }
 
+    public int getPrice() {
+        return price;
+    }
 
     @Override
     public String toString() {
@@ -49,3 +53,5 @@ public Car(){}
     return retval;
     }
 }
+
+
