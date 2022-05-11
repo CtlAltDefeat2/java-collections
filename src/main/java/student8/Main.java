@@ -1,7 +1,6 @@
 package student8;
 
-import java.util.LinkedList;
-import java.util.Queue;
+import java.util.*;
 import java.util.concurrent.TimeUnit;
 
 public class Main {
@@ -10,7 +9,8 @@ public class Main {
         //ex2();
         //ex3();
         //ex4();
-        ex5();
+        //ex5();
+        ex6();
     }
 
     private static void ex1() {
@@ -91,6 +91,28 @@ public class Main {
     }
 
     private static void ex6() {
-        System.out.println("TODO...");
+        ArrayList<Car> cars = new ArrayList<Car>();
+        var c1 = new Car("McLaren ", "570S Spider", 200000, "blue", 10000);
+        var c2 = new Car("Ferrari ", "488 Spider", 400000, "red", 30000);
+        var c3 = new Car("Lamborghini ", "Aventador", 500000, "black", 20000);
+        var c4 = new Car("Ford ", "GT", 1000000, "white", 25000);
+        var c5 = new Car("Porsche ", "911", 200000, "silver", 15000);
+
+        cars.add(c1);
+        cars.add(c2);
+        cars.add(c3);
+        cars.add(c4);
+        cars.add(c5);
+
+        for (int i = 0; i < cars.size()-1; i++) {
+            cars.get(i).compareTo(cars.get(i+1));
+            System.out.println(i);
+        }
+
+        Comparator<Car> priceComparator = Comparator.comparing(Car::getPrice);
+
+        Collections.sort(cars, priceComparator);
+
+        System.out.println(cars);
     }
 }
