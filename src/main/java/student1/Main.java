@@ -1,14 +1,15 @@
 package student1;
 
 import java.util.*;
+import java.util.concurrent.TimeUnit;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         //ex1();
         //ex2();
         //ex3();
-        ex4();
-        //ex5();
+        //ex4();
+        ex5();
         //ex6();
     }
 
@@ -59,8 +60,39 @@ public class Main {
         }
 
 
-        private static void ex5 () {
-            System.out.println("TODO...");
+        private static void ex5 () throws InterruptedException {
+            var p1 = new Person("Alice", 11);
+            var p2 = new Person("Bob", 22);
+            var p3 = new Person("Charlie", 33);
+            var p4 = new Person("Dave", 44);
+            var p5 = new Person("Edgar", 55);
+            var p6 = new Person("Fred", 66);
+
+// TODO: Create queue of people here...
+            Queue<Person> personQueue = new LinkedList<Person>();
+            personQueue.add(p1);
+            personQueue.add(p2);
+            personQueue.add(p3);
+            personQueue.add(p4);
+            personQueue.add(p5);
+            personQueue.add(p6);
+
+            while (true) {
+                if (personQueue.isEmpty()) {
+                    break;
+                }
+                else
+                    System.out.println(personQueue.poll());
+
+                // TODO...
+                // Display contents of queue on console.
+                // Remove first person from queue.
+                // if queue is empty break from loop.
+
+                TimeUnit.SECONDS.sleep(2);
+            }
+
+            System.out.println("Finished");
         }
 
         private static void ex6 () {

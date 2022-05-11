@@ -24,6 +24,11 @@ public class Person {
         this.socialSecurityNumber = socialSecurityNumber;
     }
 
+    public Person(String firstName, int age) {
+        this.firstName = firstName;
+        this.age = age;
+    }
+
     //
     //Methods
     //
@@ -45,10 +50,10 @@ public class Person {
     @Override
     public String toString() {
         return
-                firstName + " " +
-                lastName + ", " +
-                age +", " +
-                socialSecurityNumber;
+                firstName + ", " +
+                //lastName + ", " +
+                age;
+                //socialSecurityNumber;
     }
 }
 
