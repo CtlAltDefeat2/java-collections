@@ -22,7 +22,7 @@ public class Person {
     }
 
     @Override
-    public boolean equals(Object o) {
+    public boolean equals(Object o) {//compare member of two objects of the same class
         if (this == o) return true;
         if (!(o instanceof Person)) return false;
         Person person = (Person) o;
@@ -30,7 +30,16 @@ public class Person {
     }
 
     @Override
-    public int hashCode() {
+    public int hashCode() {//detect if two object in a hashset and get rid of any duplicate
         return Objects.hash(ssn);
+    }
+
+    @Override
+    public String toString() {
+        return
+                name + '\'' +
+                lastName + '\'' +
+                age +
+                ssn + '\'';
     }
 }
