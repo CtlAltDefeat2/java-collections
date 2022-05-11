@@ -55,11 +55,13 @@ public class Person {
 
     @Override
     public String toString() {
-
-//        return firstName + " " +
-//                lastName + " " +
-//                age + " " +
-//                ssn;
-        return firstName + " " + age;
+        if(lastName == null && ssn == null) {
+            return firstName + " " + age;
+        } else {
+            return firstName + " " +
+                    lastName + " " +
+                    age + " " +
+                    ssn;
+        }
     }
 }

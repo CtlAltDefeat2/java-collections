@@ -5,11 +5,11 @@ import java.util.concurrent.TimeUnit;
 
 public class Main {
     public static void main(String[] args) throws InterruptedException {
-//        ex1();
-//        ex2();
-//        ex3();
-//        ex4();
-//        ex5();
+        ex1();
+        ex2();
+        ex3();
+        ex4();
+        ex5();
         ex6();
     }
 
@@ -19,10 +19,10 @@ public class Main {
         var p2 = new Person("Jon", "Smith", 22, "000-00-0000");
 
         if (p.equals(p1)) {
-            System.out.printf("Yes");
+            System.out.printf("Yes \n");
         }
         if (p1.equals(p2)) {
-            System.out.println("Here");
+            System.out.println("Here \n");
         }
     }
 
