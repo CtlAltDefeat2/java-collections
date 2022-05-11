@@ -102,7 +102,7 @@ public class Main {
         var c3= new Car ("Kia","Sol",25000, "red",3000);
         var c4 = new Car ("Acura", "ILX",20000,"yellow",5000);
         var c5 = new Car ("Hyundai", "Elantra", 22000,"Silver", 6000);
-
+        //list
         ArrayList <Car> car= new ArrayList<>();
         car.add(c1);
         car.add(c2);
