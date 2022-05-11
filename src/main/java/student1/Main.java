@@ -9,8 +9,8 @@ public class Main {
         //ex2();
         //ex3();
         //ex4();
-        ex5();
-        //ex6();
+        //ex5();
+        ex6();
     }
 
     private static void ex1() {
@@ -96,6 +96,35 @@ public class Main {
         }
 
         private static void ex6 () {
+        ArrayList<Car> carList = new ArrayList<Car>();
+        Car c1 = new Car("honda", "civic", 25000F,"blue",10000);
+        Car c2 = new Car("Nissan", "Pathfinder", 52000F, "Blue", 30000);
+        Car c3 = new Car("Porsche", "Panamera", 100000F, "White", 24);
+        Car c4 = new Car("BMW", "5 series", 60000F, "White", 15);
+        Car c5 = new Car("Mercedes", "E350", 65000F, "White", 35);
+
+
             System.out.println("TODO...");
+            carList.add(c1);
+            carList.add(c2);
+            carList.add(c3);
+            carList.add(c4);
+            carList.add(c5);
+
+             carList.sort(Car::compareTo);
+            for (Car c: carList) {
+                System.out.println(c);
+            }
+
+            Comparator<Car> priceComparator = new Comparator<Car>() {
+                public int compare(Car c1, Car c2) {
+                    return (int)c1.getPrice() - (int)c2.getPrice();
+                }
+            };
+            carList.sort(priceComparator);
+            for (Car c: carList) {
+                System.out.println(c);
+            }
         }
+
     }

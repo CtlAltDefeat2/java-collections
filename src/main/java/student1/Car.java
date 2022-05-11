@@ -1,0 +1,45 @@
+package student1;
+
+import java.util.ArrayList;
+
+public class Car implements Comparable<Car> {
+    private String make;
+    private String model;
+    private float price;
+    private String color;
+    private int miles;
+
+
+    // Constructor
+    public Car(String make, String model, float price, String color, int miles) {
+        this.make = make;
+        this.model = model;
+        this.price = price;
+        this.color = color;
+        this.miles = miles;
+    }
+
+    @Override
+    public String toString() {
+        return "Car{" +
+                "make='" + make + '\'' +
+                ", model='" + model + '\'' +
+                ", price=" + price +
+                ", color='" + color + '\'' +
+                ", miles=" + miles +
+                '}';
+    }
+
+    @Override
+    public int compareTo(Car o) {
+        if (this.miles> o.miles) {//move this to the up of the list
+            return 1;
+        }
+        else
+            return -1;//move down the list
+    }
+
+    public float getPrice() {
+        return price;
+    }
+}
