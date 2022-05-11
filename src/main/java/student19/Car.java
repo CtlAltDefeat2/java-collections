@@ -32,7 +32,11 @@ public class Car implements Comparable<Car> {
             else
                 return -1;
             }
-        }
+
+    public double getPrice() {
+        return Price;
+    }
+}
 
 
 

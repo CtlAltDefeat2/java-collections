@@ -1,9 +1,6 @@
 package student19;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.LinkedList;
-import java.util.Queue;
+import java.util.*;
 import java.util.concurrent.TimeUnit;
 
 public class Main {
@@ -102,6 +99,14 @@ public class Main {
         carList.add(car4);
         carList.add(car5);
         Collections.sort(carList);
+        Comparator<Car> PriceComparator = new Comparator<Car>() {
+
+            public int compare(Car car1, Car car2) {
+                return (int) (car1.getPrice() - car2.getPrice());
+
+            }
+        };carList.sort(PriceComparator);
+
         System.out.println(carList);
     }
 }
