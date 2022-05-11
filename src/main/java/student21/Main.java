@@ -1,7 +1,5 @@
 package student21;
-import java.util.LinkedList;
-import java.util.Queue;
-import java.util.Scanner;
+import java.util.*;
 import java.util.concurrent.TimeUnit;
 
 public class Main {
@@ -10,8 +8,8 @@ public class Main {
         //ex2();
         //ex3();
         //ex4();
-        ex5();
-        //ex6();
+        //ex5();
+        ex6();
     }
 
 //    private static void ex1() {
@@ -92,7 +90,27 @@ public class Main {
     }
 
     private static void ex6() {
-        System.out.println("TODO...");
+        //Making array list for cars
+        ArrayList<Car> carList = new ArrayList<Car>();
+
+        //making cars (make, model, price, color, mileage) and adding them to the array list
+        carList.add(new Car("Bugatti","Chiron",4000000.00f,"Red",10000.00f));
+        carList.add(new Car("Acura","ILX",20000.00f,"White",30000.00f));
+        carList.add(new Car("Acura","TLX",30000.00f,"Blue",30000.00f));
+        carList.add(new Car("GMC","Sierra",45000.00f,"Black",2000.00f));
+        carList.add(new Car("Ford","Mustang",80000.00f,"Grey",75000.00f));
+        carList.add(new Car("Chevrolet","Camaro",60000.00f,"Yellow",100000.00f));
+
+        Collections.sort(carList);
+        System.out.println(carList);
+
+        Comparator<Car> carComparator = new Comparator<Car>() {
+            public int compare(Car c1, Car c2) {
+                return (int) (c1.getPrice()-c2.getPrice());
+            }
+        };
+        carList.sort(carComparator);
+        System.out.println(carList);
     }
 }
 
