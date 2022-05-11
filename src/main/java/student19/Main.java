@@ -1,18 +1,21 @@
 package student19;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.concurrent.TimeUnit;
 
 public class Main {
     public static void main(String[] args) throws InterruptedException {
-       // ex1();
+        // ex1();
         //ex2();
         //ex3();
-       // ex4();
-        ex5();
-        //ex6();
+        // ex4();
+        //ex5();
+        ex6();
     }
+
     private static void ex1() {
         var p = new Person("Tom", "Thumb", 11, "123-45-1234");
         var p1 = new Person("Jon", "Smith", 22, "123-45-1234");
@@ -24,6 +27,7 @@ public class Main {
             System.out.println("Here");
         }
     }
+
     private static void ex2() {
         var inputString = "The water main broke on water street on the day before my birthday";
         var wordCounter = new WordCounter(inputString);
@@ -49,13 +53,13 @@ public class Main {
     }
 
     private static void ex4() {
-       var wordReverser = new WordReverser("This is a test");
-       wordReverser.reverseWords();
-       System.out.println(wordReverser.getReversedWords());
-       System.out.println(wordReverser.getWordCount());
+        var wordReverser = new WordReverser("This is a test");
+        wordReverser.reverseWords();
+        System.out.println(wordReverser.getReversedWords());
+        System.out.println(wordReverser.getWordCount());
     }
 
-    private static void  ex5() throws InterruptedException {
+    private static void ex5() throws InterruptedException {
         var p1 = new Person("Alice", 11);
         var p2 = new Person("Bob", 22);
         var p3 = new Person("Charlie", 33);
@@ -70,21 +74,34 @@ public class Main {
         personQueue.add(p4);
         personQueue.add(p5);
         personQueue.add(p6);
-       //var p = personQueue.remove();
+        //var p = personQueue.remove();
 
         while (true) {
             System.out.println(personQueue.poll());
-            if(personQueue.isEmpty())
+            if (personQueue.isEmpty())
                 break;
             TimeUnit.SECONDS.sleep(2);
         }
 
         System.out.println("Finished");
-        }
+    }
 
 
     private static void ex6() {
-        System.out.println("TODO...");
+
+        var car1 = new Car("Honda", "crv", 30000.0, "White", 25000);
+        var car2 = new Car("BMW", "X5", 40000.0, "Red", 20000);
+        var car3 = new Car("Audi", "Q5", 45000.0, "Black", 15000);
+        var car4 = new Car("Infinity", "qx60", 50000.0, "Blue", 35000);
+        var car5 = new Car("Nissan", "rogue", 32000.0, "Gray", 10000);
+        ArrayList<Car> carList = new ArrayList<>();
+
+        carList.add(car1);
+        carList.add(car2);
+        carList.add(car3);
+        carList.add(car4);
+        carList.add(car5);
+        Collections.sort(carList);
+        System.out.println(carList);
     }
 }
-

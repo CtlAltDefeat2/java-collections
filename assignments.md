@@ -148,6 +148,7 @@ Model
 Price
 Color
 Miles
+
 Populate the list with 5 cars of your choice. Override the Comparable<Car> interface to sort the cars according to their mileage. Display the list on the console.
 
 Part B
