@@ -118,16 +118,16 @@ public class Main {
             System.out.println(c);
 
         }
-//        Comparator<Car> priceComparator = new Comparator<Car>() {
-//
-//            public int compare(Car c1, Car c2) {
-//                return (int)c1.getPrice() - (int)c2.getPrice();
-//            }
-//        };
-//        carList.sort(priceComparator);
-//        for (Car c : carList) {
-//            System.out.println(c);
-//        }
+        Comparator<Car> priceComparator = new Comparator<Car>() {
+
+            public int compare(Car c1, Car c2) {
+                return (int)c1.getPrice() - (int)c2.getPrice();
+            }
+        };
+        carList.sort(priceComparator);
+        for (Car c : carList) {
+            System.out.println(c);
+        }
 
     }
 

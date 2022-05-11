@@ -42,8 +42,7 @@ public class Car implements Comparable<Car> {
         } else
             return -1;           //move down the list
     }
+    public float getPrice() {
+        return price;
+    }
 }
-//    public float getPrice() {
-//        return price;
-//    }
-//}
