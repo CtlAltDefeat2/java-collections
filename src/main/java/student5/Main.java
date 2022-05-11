@@ -1,6 +1,9 @@
 package student5;
 
-import java.util.PriorityQueue;
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.concurrent.TimeUnit;
 
 public class Main {
@@ -9,8 +12,8 @@ public class Main {
         //ex2();
         //ex3();
         //ex4();
-        ex5();
-        //ex6();
+        //ex5();
+        ex6();
     }
     private static void ex1() {
         var p = new Person("Tom", "Thumb", 11, "123-45-1234");
@@ -59,16 +62,15 @@ public class Main {
         var p6 = new Person("Fred", 66);
         var isNotEmpty = true;
 
-        PriorityQueue<String> queue = new PriorityQueue<>();
-        queue.add(p1.toString());
-        queue.add(p2.toString());
-        queue.add(p3.toString());
-        queue.add(p4.toString());
-        queue.add(p5.toString());
-        queue.add(p6.toString());
+        Queue<Person> queue = new LinkedList<>();
+        queue.add(p1);
+        queue.add(p2);
+        queue.add(p3);
+        queue.add(p4);
+        queue.add(p5);
+        queue.add(p6);
 
         while (isNotEmpty) {
-            // TODO...
             System.out.println(queue);
             queue.remove();
             if (queue.isEmpty()) {
@@ -78,7 +80,35 @@ public class Main {
         }
         System.out.println("Finished");
     }
-    private static void ex6() {
-        System.out.println("TODO...");
+    private static void ex6() { //sorting
+        var car1 = new Car(2019, "Subaru", "Forester Sport", 32000, "Dark Blue Pearl", 25096);
+        var car2 = new Car(2021, "Lamborghini", "Huracan STO", 442033, "Matte Eclettica", 800);
+        var car3 = new Car(2021, "McLaren", "765LT", 358000, "Lantana Purple", 400);
+        var car4 = new Car(2022, "BMW", "M4 Competition Convertible", 107750, "Sao Paulo Yellow", 200);
+        var car5 = new Car(2022, "Ford", "Mustang Mach-E Premium", 48775, "Cyber Orange Metallic Tri-Coat", 600);
+
+        ArrayList<Car> carList = new ArrayList<>();
+
+        carList.add(car1);
+        carList.add(car2);
+        carList.add(car3);
+        carList.add(car4);
+        carList.add(car5);
+
+        carList.sort(Car::compareTo);
+        System.out.println("Order by miles: ");
+        for(Car car : carList){
+            System.out.println("\t" + car);
+        }
+        Comparator<Car> priceComparator = new Comparator<Car>() {
+            public int compare(Car c1, Car c2) {
+                return (int) (c1.getPrice() - c2.getPrice());
+            }
+        };
+        carList.sort(priceComparator);
+        System.out.println("\n Order by price: ");
+        for(Car c : carList){
+            System.out.println("\t" +c);
+        }
     }
 }
