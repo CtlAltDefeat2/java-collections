@@ -98,9 +98,9 @@ public class Main {
         Collections.sort(cars);
 
         for(Car item : cars){
-            System.out.println(item.Make + " " + item.Model + " " + item.Price + " " + item.Color + " " + item.MilesPerGallon);
+            System.out.println(item.make + " " + item.model + " " + item.price + " " + item.color + " " + item.milesPerGallon);
         }
-        System.out.println("\n \n \n");
+        System.out.println("\n \n");
         Comparator<Car> priceComparator = new Comparator<Car>(){
             public int compare(Car car1, Car car2) {
                 return (int) (car1.getPrice()- car2.getPrice());
@@ -108,7 +108,7 @@ public class Main {
         };
         cars.sort(priceComparator);
         for(Car item : cars){
-            System.out.println(item.Make + " " + item.Model + " " + item.Price + " " + item.Color + " " + item.MilesPerGallon);
+            System.out.println(item.make + " " + item.model + " " + item.price + " " + item.color + " " + item.milesPerGallon);
         }
     }
 }
