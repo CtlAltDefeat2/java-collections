@@ -17,11 +17,12 @@ public class Person {
     //Constructors
     //
 
-    public Person(String firstName, String lastName, Integer age, String ssn) {
+
+
+    public Person(String firstName,  Integer age) {
         this.firstName = firstName;
-        this.lastName = lastName;
         this.age = age;
-        this.ssn = ssn;
+
     }
 
 
