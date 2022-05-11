@@ -1,12 +1,13 @@
 package student26;
 
 import java.util.Stack;
+import java.util.StringTokenizer;
 
 public class WordReverser {
 
     private String phrase;
     private Stack <String> sentence = new Stack<>();
-    private int wordCount;
+
 
     public WordReverser(String phrase) {
         this.phrase=phrase;
@@ -18,7 +19,6 @@ public class WordReverser {
         String [] reverse = phrase.split("");
         for (String i : reverse){
             sentence.push(i);
-            wordCount++;
         }
 
     }
@@ -34,6 +34,9 @@ public class WordReverser {
     }
 
     public int getWordCount() {
-        return wordCount;
+
+        StringTokenizer token = new StringTokenizer(phrase);
+
+        return token.countTokens();
     }
 }
