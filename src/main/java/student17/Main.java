@@ -100,11 +100,13 @@ public class Main {
         cars.add(c4);
         cars.add(c5);
 
+        cars.sort(Car::compareTo);
+        for(Car c : cars){
+            System.out.println(c);
+        }
         Comparator<Car> priceComparator = (c11, c21) -> (int) (c11.getPrice() - c21.getPrice());
         cars.sort(priceComparator);
-        System.out.println(cars);
-        }
-
     }
+}
 
 

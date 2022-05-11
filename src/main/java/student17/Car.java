@@ -41,11 +41,14 @@ public class Car implements Comparable<Car> {
                " " + miles;
     }
     @Override
-    public int compareTo(Car o) {
-        if (this.miles > o.miles) {
+    public int compareTo(Car c) {
+        if (this.miles > c.miles) {
             return 1;
-        } else
+        } else if (this.miles < c.miles){
             return -1;
+        }else{
+            return 0;
+        }
     }
 }
 
