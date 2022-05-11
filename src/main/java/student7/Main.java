@@ -1,9 +1,6 @@
 package student7;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.LinkedList;
-import java.util.Queue;
+import java.util.*;
 import java.util.concurrent.TimeUnit;
 
 public class Main {
@@ -49,14 +46,12 @@ public class Main {
         personDeDuper.addPerson(p3);
         System.out.println(personDeDuper.getUniquePeople());
     }
-
     private static void ex4() {
         var wordReverser = new WordReverser("This is a test");
         wordReverser.reverseWords();
         System.out.println(wordReverser.getReversedWords());
         System.out.println(wordReverser.getWordCount());
     }
-
     private static void ex5() throws InterruptedException {
         var p1 = new Person("Alice", 11);
         var p2 = new Person("Bob", 22);
@@ -64,8 +59,6 @@ public class Main {
         var p4 = new Person("Dave", 44);
         var p5 = new Person("Egar", 55);
         var p6 = new Person("Fred", 66);
-
-
         Queue<Person> personQueue = new LinkedList<Person>();
         personQueue.add(p1);
         personQueue.add(p2);
@@ -73,18 +66,15 @@ public class Main {
         personQueue.add(p4);
         personQueue.add(p5);
         personQueue.add(p6);
-
         while (true) {
-            if(personQueue.isEmpty()){
+            if(personQueue.isEmpty())
                 break;
-            }
             else
                 System.out.println( personQueue.poll());
-                TimeUnit.SECONDS.sleep(2);
+            TimeUnit.SECONDS.sleep(2);
         }
         System.out.println("Finished");
     }
-
     private static void ex6() {
         ArrayList<Car> carList = new ArrayList<>();
         Car c1 = new Car("Mazda","M3", 30000.00F, "white",5000);
@@ -94,9 +84,19 @@ public class Main {
         carList.add(c2);
         carList.add(c3);
         carList.sort(Car::compareTo);
+        System.out.println("sort by miles");
         for(Car c : carList){
             System.out.println(c);
         }
-
+        Comparator<Car> priceComparator = new Comparator<Car>() {
+            public int compare(Car c1, Car c2) {
+                return (int)c1.getPrice() - (int)c2.getPrice();
+            }
+        };
+        System.out.println("sort by price");
+        carList.sort(priceComparator);
+        for(Car c : carList) {
+            System.out.println(c);
+        }
     }
 }

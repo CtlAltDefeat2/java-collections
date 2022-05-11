@@ -15,6 +15,10 @@ public class Car implements Comparable<Car>{
         this.miles = miles;
     }
 
+    public float getPrice() {
+        return price;
+    }
+
     @Override
     public String toString() {
         return "Car{" +
@@ -34,4 +38,6 @@ public class Car implements Comparable<Car>{
         else
             return -1;
     }
+
+
 }
