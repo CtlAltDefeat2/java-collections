@@ -1,5 +1,6 @@
 package student8;
 
+import java.util.ArrayList;
 import java.util.Comparator;
 
 public class Car implements Comparable<Car> {
@@ -29,9 +30,15 @@ public class Car implements Comparable<Car> {
     }
 
     @Override
-    public int compareTo(Car o) {
-        System.out.println(make + miles);
-        return 0;
+    public int compareTo(Car c1) {
+        ArrayList<Car> carCompare = new ArrayList<Car>();
+        if (this.miles == c1.miles) {
+            return 0;
+        } else if (this.miles > c1.miles) {
+            return 1;
+        } else {
+            return -1;
+        }
     }
 
     @Override
@@ -41,7 +48,7 @@ public class Car implements Comparable<Car> {
                 ", model='" + model + '\'' +
                 ", price=" + price +
                 //", color='" + color + '\'' +
-                //", miles=" + miles +
+                ", miles=" + miles +
                 '}';
     }
 }
