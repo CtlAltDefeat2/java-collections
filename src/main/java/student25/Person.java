@@ -14,6 +14,12 @@ public class Person {
         this.age = age;
         this.ssn = ssn;
     }
+
+    public Person(String name, Integer age) {
+      this.name = name;
+      this.age = age;
+    }
+
     //The Person class overrides the equals' method.
     @Override
     public boolean equals(Object o) {
@@ -25,11 +31,16 @@ public class Person {
 
     @Override
     public int hashCode() {
-        return Objects.hash(name, lastName, age, ssn);
+        return Objects.hash(name, age);
     }
-
     @Override
     public String toString() {
-        return name + " "+  lastName+ ", "+ age + ", " + ssn + '\n';
+        return "Person{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                '}';
+//    @Override
+//    public String toString() {
+//        return name + " "+  lastName+ ", "+ age + ", " + ssn + '\n';
     }
 }
