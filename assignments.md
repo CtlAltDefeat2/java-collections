@@ -113,9 +113,50 @@ test a is This
 4
 ```
 
-# Ex. 5 
+# Ex. 5 Queues
+Given the following code, implement the TODOs...
+
+var p1 = new Person("Alice", 11);
+var p2 = new Person("Bob", 22);
+var p3 = new Person("Charlie", 33);
+var p4 = new Person("Dave", 44);
+var p5 = new Person("Egar", 55);
+var p6 = new Person("Fred", 66);
+
+// TODO: Create queue of people here...
+
+while (true) {
+// TODO...
+// Display contents of queue on console.
+// Remove first person from queue.
+// if queue is empty break from loop.
+
+    TimeUnit.SECONDS.sleep(2);
+}
+
+System.out.println("Finished");
 
 
 
 
-# Ex. 6 
+# Ex. 6 Sorting
+Part A
+Create an ArrayList of type Car. The Car class has the following attributes:
+
+Make
+Model
+Price
+Color
+Miles
+Populate the list with 5 cars of your choice. Override the Comparable<Car> interface to sort the cars according to their mileage. Display the list on the console.
+
+Part B
+Using the code below as a reference, create custom comparator that sorts the cars based on price:
+
+Comparator<Person> ageComparator = new Comparator<Person>() {
+public int compare(Person p1, Person p2) {
+return p1.getAge() - p2.getAge();
+}
+};
+personList.sort(ageComparator);
+Display the sorted list on the console.

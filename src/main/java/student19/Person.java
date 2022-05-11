@@ -10,6 +10,13 @@ public class Person {
         this.age = age;
         this.ssn = ssn;
     }
+
+    public Person(String fName, int age) {
+        this.name = fName;
+        this.age = age;
+
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
