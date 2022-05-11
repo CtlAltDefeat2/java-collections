@@ -12,7 +12,6 @@ public class Main {
         //ex5();
         ex6();
     }
-
     private static void ex1() {
         var p = new Person("Tom", "Thumb", 11, "123-45-1234");
         var p1 = new Person("Jon", "Smith", 22, "123-45-1234");
@@ -25,7 +24,6 @@ public class Main {
             System.out.println("Here");
         }
     }
-
     private static void ex2() {
         var inputString = "The water main broke on water street on the day before my birthday";
         var wordCounter = new WordCounter(inputString);
@@ -38,7 +36,6 @@ public class Main {
         var p1 = new Person("Alice", "Jones", 11, "111-11-1111");
         var p2 = new Person("Bob", "Smith", 22, "222-22-2222");
         var p3 = new Person("Bob", "Smith", 22, "222-22-2222");
-
         var personDeDuper = new PersonDeDuper();
         personDeDuper.addPerson(p);
         personDeDuper.addPerson(p1);
