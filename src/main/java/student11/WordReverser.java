@@ -1,42 +1,37 @@
-/*
+
 package student11;
 import java.util.Stack;
 
 public class WordReverser {
     //data members
-    private String reversedWords;
-    StringBuilder reverseString = new StringBuilder();
-    //Stack<String> reverseString = new Stack<>();
-    StringBuilder string = new StringBuilder();
+    private String inputString;
+    //StringBuilder reverseString = new StringBuilder();
+    Stack<String> reverseStack = new Stack<>(); //wordStack or reverseStack
+
     private int wordCount;
 
     //constructor
-    public WordReverser(String reversedWords) {
-        this.reversedWords = reversedWords;
+    public WordReverser(String inputString) {
+        this.inputString = inputString;
+    }
+    public String getInputString() {//pop the last item added into the stack
+        var retVal = "";
+        while (!reverseStack.isEmpty()) {
+            retVal += reverseStack.pop() + " ";
+            wordCount++;
+        }
+        return retVal;
     }
 
-    public String getReversedWords() {
-        //return reverseString;
-        public String getReversedWords () {
-            var retVal = "";
-            while (!reverseString.isEmpty()) {
-       //         retVal += reverseString.pop() + " ";
-                wordCount++;
-            }
-            return retVal;
-        }
-        public int getWordCount () {
-            //return wordCount;
-        }
+    public int getWordCount() {
+        return wordCount;
+    }
+    public void reverseWords() { //convert the string into an array of string then add each word into the stack
+        String[] reverseWords = inputString.split(" ");
+        for (String word : reverseWords) {
+            reverseStack.add(word);
 
-        //methods
-        public void reverseWords () {
-            String[] words = reversedWords.split(" ");
-            for (int i = words.length - 1; i >= 0; i--) {
-                this.reverseString.append(words[i]).append(" ");
-                for (String word : words) {
-                   // reverseString.push(word);
-                }
-            }
         }
-    }}*/
+    }
+
+}
