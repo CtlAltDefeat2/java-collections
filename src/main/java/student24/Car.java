@@ -39,13 +39,21 @@ public class Car implements Comparable<Car>{
         return miles;
     }
 
+    public static String presentation(ArrayList<Car> list) {
+        String retval = "";
+        for(Car c : list) {
+            retval += (c.make + "  "+  c.model + "  "+  c.color + "  "+  c.price +"  "+ c.miles+"\n");
+        }
+        return retval;
+    }
+
     @Override
     public String toString() {
         return  make + "  " +
                 model +  " " +
                  price + " "+
                  color + " " +
-                 miles + "\n";
+                 miles;
     }
 
 
@@ -56,4 +64,6 @@ public class Car implements Comparable<Car>{
         else
             return -1;
     }
+
+
 }
