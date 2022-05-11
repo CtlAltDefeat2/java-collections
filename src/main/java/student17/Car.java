@@ -14,14 +14,9 @@ public class Car implements Comparable<Car> {
     private Float price;
     private String color;
     private int miles;
-
-    ArrayList<Car> carslist = new ArrayList<>();
-
     //
     //Constructor
     //
-
-
     public Car(String make, String model, Float price, String color, int miles) {
         this.make = make;
         this.model = model;
@@ -29,22 +24,14 @@ public class Car implements Comparable<Car> {
         this.color = color;
         this.miles = miles;
     }
-    public void addCar(Car c){
-        carslist.addAll(carslist);
-    }
     Comparator<Car> priceComparator = new Comparator<Car>() {
         public int compare(Car o1, Car o2) {
             return (int) (o1.getPrice() - o2.getPrice());
         }
-
     };
-//    cars.sort(priceComparator);
-
-
     public float getPrice() {
         return price;
     }
-
     @Override
     public String toString() {
         return make +
@@ -53,7 +40,6 @@ public class Car implements Comparable<Car> {
                " " + color +
                " " + miles;
     }
-
     @Override
     public int compareTo(Car o) {
         if (this.miles > o.miles) {
