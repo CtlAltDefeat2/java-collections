@@ -4,14 +4,26 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Main {
-    public static void main(String[] args) {
-        //ex1();
-        ex2();
-        //ex3();
-        //ex4();
-        //ex5();
-        //ex6();
+public static void main(String[] args) {
+
+}
+    private static void ex3() {
+        var p = new Person("Alice", "Jones", 11, "111-11-1111");
+        var p1 = new Person("Alice", "Jones", 11, "111-11-1111");
+        var p2 = new Person("Bob", "Smith", 22, "222-22-2222");
+        var p3 = new Person("Bob", "Smith", 22, "222-22-2222");
+
+        var personDeDuper = new PersonDeDuper();
+        personDeDuper.addPerson(p);
+        personDeDuper.addPerson(p1);
+        personDeDuper.addPerson(p2);
+        personDeDuper.addPerson(p3);
+
+        System.out.println(personDeDuper.getUniquePeople());
     }
+
+
+}
 
 //    private static void ex1() {
 //        var p = new Person("Tom", "Thumb", 11, "123-45-1234");
@@ -27,7 +39,7 @@ public class Main {
 //        System.out.println("TODO...");
 //    }
 
-    private static void ex2() {
+    /*private static void ex2() {
         var inputString = "The water main broke on water street on the day before my birthday";
         var wordCounter = new WordCounter(inputString);
         wordCounter.countWords();
@@ -36,7 +48,7 @@ public class Main {
 
 //        System.out.println("TODO...");
 //    }
-//
+//*/
 //    private static void ex3() {
 //        System.out.println("TODO...");
 //    }
@@ -52,5 +64,5 @@ public class Main {
 //    private static void ex6() {
 //        System.out.println("TODO...");
 //    }
-    }}
+
 
