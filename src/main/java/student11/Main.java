@@ -1,6 +1,7 @@
 package student11;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.concurrent.TimeUnit;
@@ -12,7 +13,7 @@ public class Main {
         //ex3();
         //ex4();
         //ex5();
-          ex6();
+        ex6();
     }
 
     private static void ex1() {
@@ -34,7 +35,6 @@ public class Main {
         var wordCounter = new WordCounter(inputString);
         wordCounter.countWords();
         System.out.println(wordCounter.getWordCount());
-
 
 
     }
@@ -81,12 +81,10 @@ public class Main {
         personQueue.add(p6);
 
 
-
         while (true) {
             if (personQueue.isEmpty()) {
                 break;
-            }
-            else{
+            } else {
                 System.out.println(personQueue.poll());
             }
 
@@ -100,12 +98,13 @@ public class Main {
         System.out.println("Finished");
 
     }
+
     private static void ex6() {
         ArrayList<Car> carList = new ArrayList<Car>();
         Car c1 = new Car("Honda", "Crv", 35000F, "Black", 40);
         Car c2 = new Car("Toyota", "Prius", 13000F, "Silver", 10000);
         Car c3 = new Car("GMC", "Sierra", 15000F, "Red", 120000);
-        Car c4 = new Car("Mazda","M3", 30000.00F, "White",5000);
+        Car c4 = new Car("Mazda", "M3", 30000.00F, "White", 5000);
         Car c5 = new Car("Honda", "Civic", 28000F, "Blue", 1000);
 
         carList.add(c1);
@@ -119,8 +118,18 @@ public class Main {
             System.out.println(c);
 
         }
+//        Comparator<Car> priceComparator = new Comparator<Car>() {
+//
+//            public int compare(Car c1, Car c2) {
+//                return (int)c1.getPrice() - (int)c2.getPrice();
+//            }
+//        };
+//        carList.sort(priceComparator);
+//        for (Car c : carList) {
+//            System.out.println(c);
+//        }
 
-   }
+    }
 
 }
 

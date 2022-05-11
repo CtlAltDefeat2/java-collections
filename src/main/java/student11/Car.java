@@ -1,6 +1,6 @@
 package student11;
 
-public class Car implements Comparable<Car>{
+public class Car implements Comparable<Car> {
     //
     //Data members
     //
@@ -37,10 +37,13 @@ public class Car implements Comparable<Car>{
 
     @Override
     public int compareTo(Car o) {
-        if (this.miles>o.miles) {
+        if (this.miles > o.miles) {
             return 1;             //move up the lost
-        }
-        else
-            return  -1;           //move down the list
+        } else
+            return -1;           //move down the list
     }
 }
+//    public float getPrice() {
+//        return price;
+//    }
+//}
