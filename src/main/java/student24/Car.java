@@ -41,11 +41,11 @@ public class Car implements Comparable<Car>{
 
     @Override
     public String toString() {
-        return  make + ' ' +
-                model + ' ' +
-                 price +' '+
-                 color + ' ' +
-                 miles;
+        return  make + "  " +
+                model +  " " +
+                 price + " "+
+                 color + " " +
+                 miles + "\n";
     }
 
 
