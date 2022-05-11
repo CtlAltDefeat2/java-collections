@@ -1,7 +1,6 @@
 package student23;
 
-import java.util.LinkedList;
-import java.util.Queue;
+import java.util.*;
 import java.util.concurrent.TimeUnit;
 
 public class Main {
@@ -10,8 +9,8 @@ public class Main {
         //ex2();
 //        ex3();
 //        ex4();
-        ex5();
-        //ex6();
+//        ex5();
+        ex6();
     }
 
     private static void ex1() {
@@ -90,6 +89,17 @@ public class Main {
     }
 
     private static void ex6() {
-        System.out.println("TODO...");
+        var cars= new ArrayList<Car>();
+        cars.add(new Car("Toyota", "Prius Prime", 34450, "white", 62 ));
+        cars.add(new Car("Tesla", "Model 3 Long Range", 62990, "red", 123));
+        cars.add(new Car("Hyundai", "Kona Electric Limited", 42500, "brown", 108));
+        cars.add(new Car("Chevrolet", "Bolt 2LT", 34700, "black", 109));
+        cars.add(new Car("Chevrolet", "Bolt EUV Premier", 38000, "grey", 105));
+
+        Collections.sort(cars);
+
+        for(Car item : cars){
+            System.out.println(item.Make + " " + item.Model + " " + item.Price + " " + item.Color + " " + item.MilesPerGallon);
+        }
     }
 }
