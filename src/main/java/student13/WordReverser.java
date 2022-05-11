@@ -10,11 +10,13 @@ public class WordReverser {
     private String inputString;
     private int wordCount;
 
+
     WordReverser(String inputString) {
         this.inputString = inputString;
         this.arrString = new ArrayList<>();
         this.reverseOrder = new Stack<>();
         this.wordCount = wordCount;
+
     }
 
     public void reverseWords() {
@@ -25,8 +27,8 @@ public class WordReverser {
         }
         for (int i = 0; i < arrString.size(); i++){
             reverseOrder.push(arrString.get(i));
-
         }
+        wordCount = reverseOrder.size();
     }
 
     public String getReversedWords() {
@@ -34,7 +36,7 @@ public class WordReverser {
 
         while(!reverseOrder.isEmpty()) {
             reverseArr += reverseOrder.pop() + " ";
-            wordCount = wordCount + 1;
+
         }
         return reverseArr;
     }

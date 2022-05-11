@@ -29,11 +29,11 @@ public class WordCounter {
             arrayWords.add(s);
         }
         for (int i = 0; i < arrayWords.size(); i++) {
-            Integer wordCount = wordMap.get(i);
-            if (wordCount == null) {
+
+            if (!wordMap.containsKey(arrayWords.get(i).toLowerCase())) {
                 wordMap.put(arrayWords.get(i).toLowerCase(), 1);
             } else
-            wordMap.put(arrayWords.get(i).toLowerCase(), wordCount+1);
+                wordMap.put(arrayWords.get(i).toLowerCase(), wordMap.get(arrayWords.get(i))+1);
         }
     }
 
