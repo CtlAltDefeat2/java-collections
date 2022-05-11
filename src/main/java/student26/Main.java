@@ -1,12 +1,15 @@
 package student26;
 
 import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.Scanner;
+import java.util.concurrent.TimeUnit;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
 
-        ex4();
+        ex5();
 
 
 
@@ -63,11 +66,44 @@ public class Main {
 
     }
 
-    private static void ex5() {
+    private static void ex5() throws InterruptedException {
+
+        var p1 = new Person("Alice", 11);
+        var p2 = new Person("Bob", 22);
+        var p3 = new Person("Charlie", 33);
+        var p4 = new Person("Dave", 44);
+        var p5 = new Person("Egar", 55);
+        var p6 = new Person("Fred", 66);
+
+
+        Queue<Person> personque = new LinkedList<Person>();
+        personque.add(p1);
+        personque.add(p2);
+        personque.add(p3);
+        personque.add(p4);
+        personque.add(p5);
+        personque.add(p6);
+
+        while(true) {
+            System.out.println(personque);
+            personque.remove();
+
+        if (personque.isEmpty()){
+            break;
+        }
+            TimeUnit.SECONDS.sleep(2);
+        }
+        System.out.println("Finished");
+
+
+
+
 
     }
 
     private static void ex6() {
+
+
         System.out.println("TODO...");
     }
 }
