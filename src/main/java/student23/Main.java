@@ -65,7 +65,6 @@ public class Main {
 
         Queue<Person> queue = new LinkedList<>();
 
-// TODO: Create queue of people here...
         queue.add(p1);
         queue.add(p2);
         queue.add(p3);
@@ -98,6 +97,16 @@ public class Main {
 
         Collections.sort(cars);
 
+        for(Car item : cars){
+            System.out.println(item.Make + " " + item.Model + " " + item.Price + " " + item.Color + " " + item.MilesPerGallon);
+        }
+        System.out.println("\n \n \n");
+        Comparator<Car> priceComparator = new Comparator<Car>(){
+            public int compare(Car car1, Car car2) {
+                return (int) (car1.getPrice()- car2.getPrice());
+            }
+        };
+        cars.sort(priceComparator);
         for(Car item : cars){
             System.out.println(item.Make + " " + item.Model + " " + item.Price + " " + item.Color + " " + item.MilesPerGallon);
         }

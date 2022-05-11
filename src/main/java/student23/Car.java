@@ -17,6 +17,10 @@ public class Car implements Comparable<Car> {
         MilesPerGallon = milesPerGallon;
     }
 
+    public double getPrice() {
+        return Price;
+    }
+
     @Override
     public int compareTo(Car car) {
 
