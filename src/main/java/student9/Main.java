@@ -6,22 +6,15 @@ import java.util.HashMap;
 public class Main {
 public static void main(String[] args) {
 
-}
-    private static void ex3() {
-        var p = new Person("Alice", "Jones", 11, "111-11-1111");
-        var p1 = new Person("Alice", "Jones", 11, "111-11-1111");
-        var p2 = new Person("Bob", "Smith", 22, "222-22-2222");
-        var p3 = new Person("Bob", "Smith", 22, "222-22-2222");
-
-        var personDeDuper = new PersonDeDuper();
-        personDeDuper.addPerson(p);
-        personDeDuper.addPerson(p1);
-        personDeDuper.addPerson(p2);
-        personDeDuper.addPerson(p3);
-
-        System.out.println(personDeDuper.getUniquePeople());
     }
-
+    private static void ex4() {
+    var wordReverser = new WordReverser("This is a test");
+    wordReverser.reverseWords();
+        //System.out.println(wordReverser.getReversedWords());
+     var wordCounter = new WordCounter("This is a test.");
+     wordCounter.countWords();
+        System.out.println(wordReverser.getWordCount());
+}
 
 }
 
@@ -45,11 +38,23 @@ public static void main(String[] args) {
         wordCounter.countWords();
         System.out.println(wordCounter.getWordCount());
 
-
 //        System.out.println("TODO...");
 //    }
 //*/
-//    private static void ex3() {
+//    /*private static void ex3() {
+//        var p = new Person("Alice", "Jones", 11, "111-11-1111");
+//        var p1 = new Person("Alice", "Jones", 11, "111-11-1111");
+//        var p2 = new Person("Bob", "Smith", 22, "222-22-2222");
+//        var p3 = new Person("Bob", "Smith", 22, "222-22-2222");
+//
+//        var personDeDuper = new PersonDeDuper();
+//        personDeDuper.addPerson(p);
+//        personDeDuper.addPerson(p1);
+//        personDeDuper.addPerson(p2);
+//        personDeDuper.addPerson(p3);
+//
+//        System.out.println(personDeDuper.getUniquePeople());
+//    }*/
 //        System.out.println("TODO...");
 //    }
 //
