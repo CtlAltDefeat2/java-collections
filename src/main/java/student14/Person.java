@@ -16,7 +16,10 @@ public class Person {
         this.age = age;
         this.ssn = ssn;
     }
-
+    public Person(String firstName, Integer age) {
+        this.firstName = firstName;
+        this.age = age;
+    }
     //methods
     public String getName(){
         return firstName+lastName;
@@ -37,13 +40,19 @@ public class Person {
         return Objects.hash(firstName,lastName, age, ssn);
     }
 
+//    @Override
+//    public String toString() {
+//        return
+//                firstName + " " +
+//                        lastName + " " +
+//                        age + " " +
+//                        ssn + " " +
+//                        '\n';
+//    }
     @Override
     public String toString() {
         return
                 firstName + " " +
-                        lastName + " " +
-                        age + " " +
-                        ssn + " " +
-                        '\n';
+                        age + " " ;
     }
 }
