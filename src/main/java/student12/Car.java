@@ -9,10 +9,10 @@ public class Car implements Comparable<Car> {
     //
     private String make;
     private String model;
-    private float price;
+    private int price;
     private String color;
     private int miles;
-    private ArrayList<Car> cars = new ArrayList<>();
+    private ArrayList<Car> carsList = new ArrayList<>();
 
 
 
@@ -22,7 +22,7 @@ public class Car implements Comparable<Car> {
     Car(){
 
     }
-    Car(String make, String model, float price, String color, int miles){
+    Car(String make, String model, int price, String color, int miles){
         this.make = make;
         this.model = model;
         this.price = price;
@@ -38,7 +38,8 @@ public class Car implements Comparable<Car> {
     //
 
     public void add(Car car){
-        this.cars.add(car);
+        this.carsList.add(car);
+        compareTo(car);
     }
 
 
@@ -49,13 +50,17 @@ public class Car implements Comparable<Car> {
 
     @Override
     public int compareTo(Car car) {
-        return 0;
+        if (this.miles < car.miles){
+            return -1;
+        }
+       else return 1;
     }
 
     @Override
     public String toString() {
         return "\n" + make + " " + model + " " + price
-                + " " + color + " " + miles ;
+               + " " + color + " " + miles ;
+
     }
 
     //
@@ -65,5 +70,9 @@ public class Car implements Comparable<Car> {
 
     public int getMiles() {
         return miles;
+    }
+
+    public int getPrice() {
+        return price;
     }
 }

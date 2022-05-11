@@ -106,13 +106,22 @@ public class Main {
         cars.add(new Car("Toyota", "Prius", 32_500, "blue", 658));
         cars.add(new Car("Mazda", "Mazda6", 65_000, "white", 18_000));
         cars.add(new Car("Honda", "Civic", 85_562, "orange", 150_000));
-        Comparator<Car> ageComparator = new Comparator<Car>() {
+        cars.sort(Car::compareTo);
+        System.out.println("Sorted by Mileage");
+        for (Car c : cars){
+            System.out.println(c);
+        }
+        Comparator<Car> priceComparator = new Comparator<Car>() {
             public int compare(Car c1, Car c2) {
-                return c1.getMiles() - c2.getMiles();
+                return c1.getPrice() - c2.getPrice();
             }
         };
-        cars.sort(ageComparator);
-        System.out.println(cars);
+        System.out.println("Sorted by price");
+        cars.sort(priceComparator);
+        for (Car c : cars){
+            System.out.println(c);
+        }
+
 
 
 
